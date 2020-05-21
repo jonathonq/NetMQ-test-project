@@ -1,0 +1,21 @@
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\NetMQ test project.exe
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\NetMQ test project.deps.json
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\NetMQ test project.runtimeconfig.json
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\NetMQ test project.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\NetMQ test project.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\NetMQ test project.pdb
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\AsyncIO.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\NetMQ.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\System.Net.Http.WinHttpHandler.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\System.ServiceModel.Primitives.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Net.Http.WinHttpHandler.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\bin\Debug\netcoreapp3.1\runtimes\win7\lib\netstandard2.0\System.Private.ServiceModel.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.csproj.CopyComplete
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.dll
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.pdb
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\NetMQ test project\NetMQ test project\obj\Debug\netcoreapp3.1\NetMQ test project.csprojAssemblyReference.cache
