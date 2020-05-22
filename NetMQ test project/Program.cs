@@ -1,40 +1,36 @@
 ﻿using System;
-using NetMQ;
-using NetMQ.Sockets;
 using System.Threading;
-using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace NetMQ_test_project
 {
-    internal static class Program
+    internal static partial class Program
     {
         private static  void Main()
         {
             Console.Title = "test";
+
+
+
+
+            // Create instance of Connection passing values server, port, Id
+            var connection = new Connection("testserver", "44012");
             
-            var subscriber = new NetMQ.Sockets.SubscriberSocket();
+            TradingRules.IndicatorIDs.Add("10260");
+            TradingRules.IndicatorIDs.Add("10261");
+            TradingRules.IndicatorIDs.Add("10262");
 
-
-
-            //subscriber.Connect("tcp://173.214.169.6:44012"); // NY4 server
-            subscriber.Connect("tcp://66.70.190.253:44012"); // test server
-            Console.WriteLine("Connecting to tcp://66.70.190.253:44012");  
-            subscriber.SubscribeToAnyTopic();
-
-            // IMPORTANT: configure TCP keepalive settings
-            subscriber.Options.TcpKeepalive = true;
-            subscriber.Options.TcpKeepaliveIdle = new System.TimeSpan(0, 0, 75);
-            subscriber.Options.TcpKeepaliveInterval = new System.TimeSpan(0, 0, 75);
-
-            while (true)
+            List<string> Messages = connection.ListenForMessages(TradingRules.IndicatorIDs);
+            foreach(string message in Messages)
             {
-                Console.WriteLine("Waiting for message... \n");
- 
-                string messageReceived = subscriber.ReceiveFrameString();
-                Console.WriteLine(messageReceived.ToString() + " received at: " + DateTime.Now.ToString());
-                
-                break; // if you received everything you need, break or leave it
+                Console.WriteLine("ID: " +  MessageParser.GetID(message) + " Data: " + MessageParser.GetData(message));
             }
+            
+
+
+            
+        
         }
     }
 }

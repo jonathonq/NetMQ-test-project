@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>NetMQ_test_project</RootNamespace>
+    <RootNamespace>NetMQ test project</RootNamespace>
+    <AssemblyName>NetMQ test project</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
