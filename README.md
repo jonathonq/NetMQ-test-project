@@ -1,2 +1,2 @@
 # NetMQ-test-project
- haawks autoclicker
+ attempt at creating an autoclicker for use with haawks g4a
