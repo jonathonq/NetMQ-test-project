@@ -7,16 +7,10 @@ using System.Linq;
 namespace NetMQ_test_project
 {
     public class  Connection{
-        private string Ip;
-        private string Port;
-            
-
+        private readonly string Ip;
+        private readonly string Port;           
         public string Address;
 
-        public Connection()
-        {
-
-        }
         public Connection(string server, string port)
         {
             switch (server.ToLower()) // Haawks servers
@@ -36,7 +30,7 @@ namespace NetMQ_test_project
             }
 
             this.Port = port;
-            this.Address = String.Format("tcp://{0}:{1}", Ip,  port);
+            this.Address = String.Format("tcp://{0}:{1}", Ip,  Port);
                 
                 
         }
@@ -47,6 +41,7 @@ namespace NetMQ_test_project
             bool Listening = true;
             var OutputList = new List<string>();
 
+            // NetMQ open socket connection & subscribe
             var subscriber = new SubscriberSocket();
             subscriber.Connect(this.Address);
             Console.WriteLine("Connecting to: " + this.Address);
@@ -66,9 +61,11 @@ namespace NetMQ_test_project
 
             while (Listening == true)
             {
+                //
                 string MessageReceived = subscriber.ReceiveFrameString();
-                //Console.WriteLine(MessageReceived);
                 OutputList.Add(MessageReceived);
+
+
                 if(OutputList.Count() == indicatorIds.Count())
                 {
                     Listening = false;

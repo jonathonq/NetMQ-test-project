@@ -57,7 +57,7 @@ namespace NetMQ_test_project
 
 
 
-            var CadRetailSalesMoM = new TradingRules("10260", 0, ">", 0.2, "<", 0.2);
+            var CadRetailSalesMoM = new TradingRules("10260", 0, ">", 0.2, "<", -0.2);
 
             List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
             foreach(string message in Messages)

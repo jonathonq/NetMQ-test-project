@@ -7,7 +7,7 @@ namespace NetMQ_test_project
 
     public class TradingRules
     {
-        private string IndicatorId;
+        private string _indicatorId;
         private double _buyTrigger;
         private string _buyOperator;
         private double _sellTrigger;
@@ -23,7 +23,7 @@ namespace NetMQ_test_project
 
         public TradingRules(string id, double cons, string buyOper, double buyDev, string sellOper, double sellDev)
         {
-            this.IndicatorId = id;
+            this._indicatorId = id;
             this._buyOperator = buyOper;
             this._buyTrigger = buyDev;
             this._sellOperator = sellOper;
@@ -58,7 +58,7 @@ namespace NetMQ_test_project
 
         private static double GetDeviation(double cons, double act)
         {
-            return cons - act;
+            return act - cons;
         }
 
         public string GenerateSignal(string data)
@@ -68,11 +68,11 @@ namespace NetMQ_test_project
             if (Operator(_buyOperator, dev, _buyTrigger))
             {
                 // if deviation matches buy trigger criteria then buy signal
-                return "buy";
+                return String.Format("buy (Deviation:{0} is: {1} than Trigger: {2})",dev, _buyOperator,_buyTrigger);
             }
             else if (Operator(_sellOperator, dev, _sellTrigger))
             {
-                return "sell";
+                return String.Format("sell (Deviation:{0} is: {1} than Trigger: {2})", dev, _sellOperator, _sellTrigger);
             }
             else
             {
@@ -82,7 +82,7 @@ namespace NetMQ_test_project
         }
         public string GetID()
         {
-            return IndicatorId;
+            return _indicatorId;
         }
 
     }
