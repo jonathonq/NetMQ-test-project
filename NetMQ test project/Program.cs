@@ -7,7 +7,6 @@ using System.Drawing;
 
 namespace NetMQ_test_project
 {
-
     internal static partial class Program
     {
         
@@ -30,6 +29,9 @@ namespace NetMQ_test_project
 "; // ascii art
             Console.WriteLine(title);
 
+            AutoClicker.SetBuyPos();
+            AutoClicker.SetSellPos();
+            AutoClicker.Test();
             // Create instance of Connection passing values server, port, Id
             var connection = new Connection("testserver", "44012");
 
@@ -40,36 +42,38 @@ namespace NetMQ_test_project
             {
                 "10260",
                 "10261",
-                "10262"
+                "10262",
+                "10263"
             };
 
 
 
-            /*List<TradingRules> AllTradingRules = new List<TradingRules>();
+            List<TradingRules> AllTradingRules = new List<TradingRules>();
 
             foreach (var id in UserDefinedIndicators)
             {
-                AllTradingRules[UserDefinedIndicators.IndexOf(id)] = new TradingRules(id,1,">", 10, "<", 10);
-                Console.WriteLine(AllTradingRules[UserDefinedIndicators.IndexOf(id)]);
+                AllTradingRules.Add( new TradingRules(id,1,">", 10, "<", 10));
+                Console.WriteLine(AllTradingRules[UserDefinedIndicators.IndexOf(id)].DisplayRules());
 
-            }*/
-
-
+            }
 
 
-            var CadRetailSalesMoM = new TradingRules("10260", 0, ">", 0.2, "<", -0.2);
+
+
+            var CadRetailSalesMoM = new TradingRules("10260", 0, ">", 1, "<=", -0.1);
 
             List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
             foreach(string message in Messages)
             {
                 Message newMessage = new Message(message);
                 CadRetailSalesMoM.GenerateSignal(newMessage.GetData());
-                Console.WriteLine("ID: {0} |  Data: {1}", newMessage.GetID(),  newMessage.GetData());
+                Console.WriteLine("\nID: {0} |  Data: {1}", newMessage.GetID(),  newMessage.GetData());
 
-                Console.WriteLine("Signal for {0} is: {1}",newMessage.GetID(), CadRetailSalesMoM.GenerateSignal(newMessage.GetData()));
+                Console.WriteLine("Signal is: {0}", CadRetailSalesMoM.GenerateSignal(newMessage.GetData()));
 
 
             }
+
         }
     }
 }

@@ -7,19 +7,14 @@ namespace NetMQ_test_project
 
     public class TradingRules
     {
+        //This class is for defining rules to a specific indicator
         private string _indicatorId;
         private double _buyTrigger;
         private string _buyOperator;
         private double _sellTrigger;
         private string _sellOperator;
-
         private double _consensus;
-
-        public TradingRules()
-        {
-
-        }
-
+        private string _displayRules;
 
         public TradingRules(string id, double cons, string buyOper, double buyDev, string sellOper, double sellDev)
         {
@@ -29,6 +24,7 @@ namespace NetMQ_test_project
             this._sellOperator = sellOper;
             this._sellTrigger = sellDev;
             this._consensus = cons;
+            this._displayRules = String.Format("ID: {0}, If Dev {1} {2}, BUY. If Dev {3} {4}, SELL",_indicatorId,_buyOperator,_buyTrigger,_sellOperator,_sellTrigger);
         }
 
 
@@ -68,11 +64,11 @@ namespace NetMQ_test_project
             if (Operator(_buyOperator, dev, _buyTrigger))
             {
                 // if deviation matches buy trigger criteria then buy signal
-                return String.Format("buy (Deviation:{0} is: {1} than Trigger: {2})",dev, _buyOperator,_buyTrigger);
+                return String.Format("buy (Deviation: {0} is: {1} Trigger: {2})",dev, _buyOperator,_buyTrigger);
             }
             else if (Operator(_sellOperator, dev, _sellTrigger))
             {
-                return String.Format("sell (Deviation:{0} is: {1} than Trigger: {2})", dev, _sellOperator, _sellTrigger);
+                return String.Format("sell (Deviation: {0} is: {1} Trigger: {2})", dev, _sellOperator, _sellTrigger);
             }
             else
             {
@@ -83,6 +79,10 @@ namespace NetMQ_test_project
         public string GetID()
         {
             return _indicatorId;
+        }
+        public string DisplayRules()
+        {
+            return _displayRules;
         }
 
     }
