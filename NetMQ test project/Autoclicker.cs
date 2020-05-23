@@ -1,13 +1,14 @@
-﻿namespace NetMQ_test_project
-{
-    internal static partial class Program
-    {
-        public class Autoclicker
-        {
-            public Autoclicker()
-            {
+﻿using System.Runtime.InteropServices;
+using System.Windows;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
 
-            }
-        }
+
+namespace NetMQ_test_project
+{
+    public class AutoClicker
+    {
+
+
     }
 }
