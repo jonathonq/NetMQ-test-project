@@ -8,7 +8,8 @@ namespace NetMQ_test_project
     public class TradingRules
     {
         //This class is for defining rules to a specific indicator
-        private string _indicatorId;
+        public string IndicatorID { get; set; }
+        public static string Signal;
         private double _buyTrigger;
         private string _buyOperator;
         private double _sellTrigger;
@@ -16,15 +17,16 @@ namespace NetMQ_test_project
         private double _consensus;
         private string _displayRules;
 
-        public TradingRules(string id, double cons, string buyOper, double buyDev, string sellOper, double sellDev)
+
+        public TradingRules(string id,double cons, string buyOper, double buyDev, string sellOper, double sellDev)
         {
-            this._indicatorId = id;
+            this.IndicatorID = id;
             this._buyOperator = buyOper;
             this._buyTrigger = buyDev;
             this._sellOperator = sellOper;
             this._sellTrigger = sellDev;
             this._consensus = cons;
-            this._displayRules = String.Format("ID: {0}, If Dev {1} {2}, BUY. If Dev {3} {4}, SELL",_indicatorId,_buyOperator,_buyTrigger,_sellOperator,_sellTrigger);
+            this._displayRules = String.Format("ID: {0}, If Dev {1} {2}, BUY. If Dev {3} {4}, SELL",IndicatorID,_buyOperator,_buyTrigger,_sellOperator,_sellTrigger);
         }
 
 
@@ -63,6 +65,7 @@ namespace NetMQ_test_project
             double dev = GetDeviation(_consensus, doubleData);
             if (Operator(_buyOperator, dev, _buyTrigger))
             {
+                
                 // if deviation matches buy trigger criteria then buy signal
                 return String.Format("buy (Deviation: {0} is: {1} Trigger: {2})",dev, _buyOperator,_buyTrigger);
             }
@@ -76,13 +79,35 @@ namespace NetMQ_test_project
             }
 
         }
-        public string GetID()
-        {
-            return _indicatorId;
-        }
+
         public string DisplayRules()
         {
             return _displayRules;
+        }
+
+        public static TradingRules DefineByInput(Indicator indicator)
+        {
+
+            float cons;
+            string buyOp;
+            float buyDev;
+            string sellOp;
+            float sellDev;
+
+            Console.WriteLine("\nDefining Trade Rules for {0}.", indicator.Id());
+            Console.WriteLine("\nWhat is the consensus figure?");
+            cons = float.Parse(Console.ReadLine());
+            Console.WriteLine("Buy Trigger: Please set Operator ( < | > | <= | >= | == )");
+            buyOp = Console.ReadLine();
+            Console.WriteLine("Buy Trigger: Please set deviation");
+            buyDev = float.Parse(Console.ReadLine());
+            Console.WriteLine("Sell Trigger: Please set Operator ( < | > | <= | >= | == )");
+            sellOp = Console.ReadLine();
+            Console.WriteLine("Sell Trigger: Please set deviation");
+            sellDev = float.Parse(Console.ReadLine());
+
+
+            return new TradingRules(indicator.Id(),cons,buyOp,buyDev,sellOp,sellDev);
         }
 
     }

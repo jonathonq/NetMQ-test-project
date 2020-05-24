@@ -29,9 +29,9 @@ namespace NetMQ_test_project
 "; // ascii art
             Console.WriteLine(title);
 
-            AutoClicker.SetBuyPos();
-            AutoClicker.SetSellPos();
-            AutoClicker.Test();
+            //AutoClicker.SetBuyPos();
+            //AutoClicker.SetSellPos();
+           // AutoClicker.Test();
             // Create instance of Connection passing values server, port, Id
             var connection = new Connection("testserver", "44012");
 
@@ -45,31 +45,71 @@ namespace NetMQ_test_project
                 "10262",
                 "10263"
             };
+            Console.WriteLine("Inputted Indicators are: ");
+            foreach(string id in UserDefinedIndicators)
+            {
+                Console.WriteLine(id);
+            }
 
+            // Creates array of indicator objects based on user inputted IDs
+            var indicators = new Indicator[UserDefinedIndicators.Count];
+            foreach (var id in UserDefinedIndicators)
+            {
+                indicators[UserDefinedIndicators.IndexOf(id)] = new Indicator(id);
+                Console.WriteLine("Define Rules for: {0}?  (y/n)", id);
+                switch (Console.ReadLine().ToLower())
+                {
+                    case "yes":
+                    case "y":
+                        break;
+                    case "no":
+                    case "n":
+
+                    default:
+                        Console.WriteLine("Invalid input. No Rules set for {0}", id);
+                        break;
+                }
+                indicators[UserDefinedIndicators.IndexOf(id)].TradingRules = TradingRules.DefineByInput(indicators[UserDefinedIndicators.IndexOf(id)]);
+
+
+            }
+            
 
 
             List<TradingRules> AllTradingRules = new List<TradingRules>();
 
             foreach (var id in UserDefinedIndicators)
             {
+
                 AllTradingRules.Add( new TradingRules(id,1,">", 10, "<", 10));
-                Console.WriteLine(AllTradingRules[UserDefinedIndicators.IndexOf(id)].DisplayRules());
 
-            }
+                //Console.WriteLine(AllTradingRules[UserDefinedIndicators.IndexOf(id)].DisplayRules());
+
+            }//possibly delete if not needed
 
 
-
-
-            var CadRetailSalesMoM = new TradingRules("10260", 0, ">", 1, "<=", -0.1);
 
             List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
             foreach(string message in Messages)
             {
-                Message newMessage = new Message(message);
-                CadRetailSalesMoM.GenerateSignal(newMessage.GetData());
-                Console.WriteLine("\nID: {0} |  Data: {1}", newMessage.GetID(),  newMessage.GetData());
+                Message currentMessage = new Message(message);
+                //CadRetailSalesMoM.GenerateSignal(newMessage.GetData());
+                Console.WriteLine("\nID: {0} |  Data: {1}", currentMessage.GetID(), currentMessage.GetData());
 
-                Console.WriteLine("Signal is: {0}", CadRetailSalesMoM.GenerateSignal(newMessage.GetData()));
+
+
+                foreach (var indicator in indicators)
+                {
+                    if (currentMessage.GetID() == indicator.Id())
+                    {
+                        indicator.TradingRules.GenerateSignal(currentMessage.GetData());
+
+                    }
+                }
+
+
+
+                //Console.WriteLine("Signal is: {0}", CadRetailSalesMoM.GenerateSignal(newMessage.GetData()));
 
 
             }

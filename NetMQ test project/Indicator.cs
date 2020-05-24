@@ -3,25 +3,38 @@
     public class Indicator
     {
         private string _id;
-        private float _consensus = 100; //default value 100 for testing. Remove later
+        private string _name;
+        private double _consensus;
+
+        public TradingRules TradingRules { get; set; }
+        public string Signal { get; set; }
+
+
 
         public Indicator(string id)
         {
             this._id = id;
         }
-        public Indicator(string id, float cons)
+        public Indicator(string id, string name)
             :this(id)
         {
-            this._consensus = cons;
+            this._name = name;
+        }
+        public Indicator(string id, string name, double consensus)
+            :this(id, name)
+        {
+            this._consensus = consensus;
         }
 
         public string Id()
         {
             return _id;
         }
-        public float Consensus()
+
+        public string DisplayTradingRules()
         {
-            return _consensus;
+            return TradingRules.DisplayRules();
         }
+
     }
 }
