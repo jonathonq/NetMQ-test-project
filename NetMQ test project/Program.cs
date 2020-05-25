@@ -33,17 +33,14 @@ namespace NetMQ_test_project
             //AutoClicker.SetSellPos();
            // AutoClicker.Test();
             // Create instance of Connection passing values server, port, Id
-            var connection = new Connection("testserver", "44012");
+            var connection = new Connection("testserver", "44011");
 
 
 
 
             List<string> UserDefinedIndicators = new List<string> // Which topics/indicator IDs to listen for
             {
-                "10260",
-                "10261",
-                "10262",
-                "10263"
+                "10005"
             };
             Console.WriteLine("Inputted Indicators are: ");
             foreach(string id in UserDefinedIndicators)
@@ -87,6 +84,12 @@ namespace NetMQ_test_project
 
             }//possibly delete if not needed
 
+            //var autoClicker = new AutoClicker();
+
+            AutoClicker.SetBuyPos();
+            AutoClicker.SetSellPos();
+            
+
 
 
             List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
@@ -100,8 +103,22 @@ namespace NetMQ_test_project
 
                 foreach (var indicator in indicators)
                 {
-                    if (currentMessage.GetID() == indicator.Id())
+                    if (currentMessage.GetID() == indicator.GetId())
                     {
+                        switch (indicator.TradingRules.GenerateSignal(currentMessage.GetData()))
+                        {
+                            case "sell":
+                                AutoClicker.ClickSell();
+                                Console.WriteLine("Sell signal");
+                                break;
+                            case "buy":
+                                AutoClicker.ClickBuy();
+                                Console.WriteLine("Buy signal");
+                                break;
+                            default:
+                                Console.WriteLine("No Signal");
+                                break;
+                        }
                         indicator.TradingRules.GenerateSignal(currentMessage.GetData());
 
                     }
