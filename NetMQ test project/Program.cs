@@ -33,14 +33,14 @@ namespace NetMQ_test_project
             //AutoClicker.SetSellPos();
            // AutoClicker.Test();
             // Create instance of Connection passing values server, port, Id
-            var connection = new Connection("testserver", "44011");
+            var connection = new Connection("ny4", "44008");
 
 
 
 
             List<string> UserDefinedIndicators = new List<string> // Which topics/indicator IDs to listen for
             {
-                "10005"
+                "00059"
             };
             Console.WriteLine("Inputted Indicators are: ");
             foreach(string id in UserDefinedIndicators)
