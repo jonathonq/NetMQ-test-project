@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_net_m_q__test__project_1_1_program" kind="class" prot="package">
+    <compoundname>NetMQ_test_project::Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" line="13" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" bodystart="13" bodyend="134"/>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="107" endline="167">NetMQ_test_project.TradingRules.DefineByInput</references>
+        <references refid="class_net_m_q__test__project_1_1_message_1a7923701336633cecab6a489b0630e996" compoundref="_message_8cs" startline="20" endline="23">NetMQ_test_project.Message.GetData</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" line="11" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" bodystart="10" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

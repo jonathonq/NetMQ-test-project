@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_net_m_q__test__project_1_1_message" kind="class" prot="public">
+    <compoundname>NetMQ_test_project::Message</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_message_1a52924895b6ab1236f32969e6878b1bda" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Message._originalString</definition>
+        <argsstring></argsstring>
+        <name>_originalString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="7" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_message_1a29fb133dcc9c35a627245d8d372250ca" compoundref="_message_8cs" startline="24" endline="27">NetMQ_test_project.Message.GetOriginalString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_message_1aebefad4089126df272171069284d2d7f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Message._id</definition>
+        <argsstring></argsstring>
+        <name>_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="8" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_message_1a2fa8016fb74f072f23e6c9c74b9c5818" compoundref="_message_8cs" startline="16" endline="19">NetMQ_test_project.Message.GetID</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_message_1a974f819cb09551d4b796fd5e08d1fa34" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Message._data</definition>
+        <argsstring></argsstring>
+        <name>_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="9" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_message_1a7923701336633cecab6a489b0630e996" compoundref="_message_8cs" startline="20" endline="23">NetMQ_test_project.Message.GetData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_message_1ae3f65be0f42e599d5490548f38b67bf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetMQ_test_project.Message.Message</definition>
+        <argsstring>(string message)</argsstring>
+        <name>Message</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="10" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_message_1a2fa8016fb74f072f23e6c9c74b9c5818" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Message.GetID</definition>
+        <argsstring>()</argsstring>
+        <name>GetID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="16" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="16" bodyend="19"/>
+        <references refid="class_net_m_q__test__project_1_1_message_1aebefad4089126df272171069284d2d7f" compoundref="_message_8cs" startline="8">NetMQ_test_project.Message._id</references>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_message_1a7923701336633cecab6a489b0630e996" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Message.GetData</definition>
+        <argsstring>()</argsstring>
+        <name>GetData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="20" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="20" bodyend="23"/>
+        <references refid="class_net_m_q__test__project_1_1_message_1a974f819cb09551d4b796fd5e08d1fa34" compoundref="_message_8cs" startline="9">NetMQ_test_project.Message._data</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" compoundref="_program_8cs" startline="13" endline="134">NetMQ_test_project.Program.Main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_message_1a29fb133dcc9c35a627245d8d372250ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Message.GetOriginalString</definition>
+        <argsstring>()</argsstring>
+        <name>GetOriginalString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="24" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="24" bodyend="27"/>
+        <references refid="class_net_m_q__test__project_1_1_message_1a52924895b6ab1236f32969e6878b1bda" compoundref="_message_8cs" startline="7">NetMQ_test_project.Message._originalString</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" line="6" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Message.cs" bodystart="5" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_net_m_q__test__project_1_1_message_1a974f819cb09551d4b796fd5e08d1fa34" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Message</scope><name>_data</name></member>
+      <member refid="class_net_m_q__test__project_1_1_message_1aebefad4089126df272171069284d2d7f" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Message</scope><name>_id</name></member>
+      <member refid="class_net_m_q__test__project_1_1_message_1a52924895b6ab1236f32969e6878b1bda" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Message</scope><name>_originalString</name></member>
+      <member refid="class_net_m_q__test__project_1_1_message_1a7923701336633cecab6a489b0630e996" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Message</scope><name>GetData</name></member>
+      <member refid="class_net_m_q__test__project_1_1_message_1a2fa8016fb74f072f23e6c9c74b9c5818" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Message</scope><name>GetID</name></member>
+      <member refid="class_net_m_q__test__project_1_1_message_1a29fb133dcc9c35a627245d8d372250ca" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Message</scope><name>GetOriginalString</name></member>
+      <member refid="class_net_m_q__test__project_1_1_message_1ae3f65be0f42e599d5490548f38b67bf4" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Message</scope><name>Message</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

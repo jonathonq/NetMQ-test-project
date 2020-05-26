@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_net_m_q__test__project_1_1_auto_clicker" kind="class" prot="public">
+    <compoundname>NetMQ_test_project::AutoClicker</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_auto_clicker_1a8d0dbf24fe6ddb387089cdc0ce4f4c3a" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int NetMQ_test_project.AutoClicker.MOUSEEVENTF_LEFTDOWN</definition>
+        <argsstring></argsstring>
+        <name>MOUSEEVENTF_LEFTDOWN</name>
+        <initializer>= 0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="23" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" compoundref="_autoclicker_8cs" startline="69" endline="73">NetMQ_test_project.AutoClicker.Click</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_auto_clicker_1af2aebac5e94ed5ef01c7191cf08158f0" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int NetMQ_test_project.AutoClicker.MOUSEEVENTF_LEFTUP</definition>
+        <argsstring></argsstring>
+        <name>MOUSEEVENTF_LEFTUP</name>
+        <initializer>= 0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="24" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" compoundref="_autoclicker_8cs" startline="69" endline="73">NetMQ_test_project.AutoClicker.Click</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_auto_clicker_1afc0d0ce66ba9f652b83d9390d8ec5a68" prot="private" static="yes" mutable="no">
+        <type><ref refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" kindref="compound">POINT</ref></type>
+        <definition>POINT NetMQ_test_project.AutoClicker._buyPos</definition>
+        <argsstring></argsstring>
+        <name>_buyPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="27" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" compoundref="_autoclicker_8cs" startline="74" endline="80">NetMQ_test_project.AutoClicker.ClickBuy</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a84bdb840ece749ca6314378675008051" compoundref="_autoclicker_8cs" startline="46" endline="52">NetMQ_test_project.AutoClicker.SetBuyPos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_auto_clicker_1aed93c11256cdbec1a78a94efc44d8c27" prot="private" static="yes" mutable="no">
+        <type><ref refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" kindref="compound">POINT</ref></type>
+        <definition>POINT NetMQ_test_project.AutoClicker._sellPos</definition>
+        <argsstring></argsstring>
+        <name>_sellPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="28" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" compoundref="_autoclicker_8cs" startline="81" endline="88">NetMQ_test_project.AutoClicker.ClickSell</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a2b997b35cecfc609c6a373e9b03511f8" compoundref="_autoclicker_8cs" startline="54" endline="59">NetMQ_test_project.AutoClicker.SetSellPos</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a85a337bca7a28342096288d77f10d22c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool NetMQ_test_project.AutoClicker.GetCursorPos</definition>
+        <argsstring>(out POINT lpPoint)</argsstring>
+        <name>GetCursorPos</name>
+        <param>
+          <type>out <ref refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" kindref="compound">POINT</ref></type>
+          <declname>lpPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="17" column="1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a8e680b0030adeb31405dfd73e3bec73a" compoundref="_autoclicker_8cs" startline="30" endline="44">NetMQ_test_project.AutoClicker.SetPos</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1adbe197665414dcce1cda5744cadaca9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool NetMQ_test_project.AutoClicker.SetCursorPos</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>SetCursorPos</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="19" column="1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" compoundref="_autoclicker_8cs" startline="74" endline="80">NetMQ_test_project.AutoClicker.ClickBuy</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" compoundref="_autoclicker_8cs" startline="81" endline="88">NetMQ_test_project.AutoClicker.ClickSell</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a1be4a7dc3960b2f9242abde6f8eadc5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.mouse_event</definition>
+        <argsstring>(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo)</argsstring>
+        <name>mouse_event</name>
+        <param>
+          <type>int</type>
+          <declname>dwFlags</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cButtons</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dwExtraInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="21" column="1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" compoundref="_autoclicker_8cs" startline="69" endline="73">NetMQ_test_project.AutoClicker.Click</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a8e680b0030adeb31405dfd73e3bec73a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" kindref="compound">POINT</ref></type>
+        <definition>static POINT NetMQ_test_project.AutoClicker.SetPos</definition>
+        <argsstring>()</argsstring>
+        <name>SetPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="30" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="30" bodyend="44"/>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a85a337bca7a28342096288d77f10d22c">NetMQ_test_project.AutoClicker.GetCursorPos</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a84bdb840ece749ca6314378675008051" compoundref="_autoclicker_8cs" startline="46" endline="52">NetMQ_test_project.AutoClicker.SetBuyPos</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a2b997b35cecfc609c6a373e9b03511f8" compoundref="_autoclicker_8cs" startline="54" endline="59">NetMQ_test_project.AutoClicker.SetSellPos</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.Click</definition>
+        <argsstring>()</argsstring>
+        <name>Click</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="69" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="69" bodyend="73"/>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a1be4a7dc3960b2f9242abde6f8eadc5a">NetMQ_test_project.AutoClicker.mouse_event</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a8d0dbf24fe6ddb387089cdc0ce4f4c3a" compoundref="_autoclicker_8cs" startline="23">NetMQ_test_project.AutoClicker.MOUSEEVENTF_LEFTDOWN</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1af2aebac5e94ed5ef01c7191cf08158f0" compoundref="_autoclicker_8cs" startline="24">NetMQ_test_project.AutoClicker.MOUSEEVENTF_LEFTUP</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" compoundref="_autoclicker_8cs" startline="74" endline="80">NetMQ_test_project.AutoClicker.ClickBuy</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" compoundref="_autoclicker_8cs" startline="81" endline="88">NetMQ_test_project.AutoClicker.ClickSell</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a84bdb840ece749ca6314378675008051" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.SetBuyPos</definition>
+        <argsstring>()</argsstring>
+        <name>SetBuyPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="46" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="46" bodyend="52"/>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1afc0d0ce66ba9f652b83d9390d8ec5a68" compoundref="_autoclicker_8cs" startline="27">NetMQ_test_project.AutoClicker._buyPos</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a8e680b0030adeb31405dfd73e3bec73a" compoundref="_autoclicker_8cs" startline="30" endline="44">NetMQ_test_project.AutoClicker.SetPos</references>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a2b997b35cecfc609c6a373e9b03511f8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.SetSellPos</definition>
+        <argsstring>()</argsstring>
+        <name>SetSellPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="54" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="54" bodyend="59"/>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1aed93c11256cdbec1a78a94efc44d8c27" compoundref="_autoclicker_8cs" startline="28">NetMQ_test_project.AutoClicker._sellPos</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a8e680b0030adeb31405dfd73e3bec73a" compoundref="_autoclicker_8cs" startline="30" endline="44">NetMQ_test_project.AutoClicker.SetPos</references>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a5f1ccb801a11f933dc7b2bbf16947c19" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.ShowPositions</definition>
+        <argsstring>()</argsstring>
+        <name>ShowPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="61" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="61" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.ClickBuy</definition>
+        <argsstring>()</argsstring>
+        <name>ClickBuy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="74" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="74" bodyend="80"/>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1afc0d0ce66ba9f652b83d9390d8ec5a68" compoundref="_autoclicker_8cs" startline="27">NetMQ_test_project.AutoClicker._buyPos</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" compoundref="_autoclicker_8cs" startline="69" endline="73">NetMQ_test_project.AutoClicker.Click</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1adbe197665414dcce1cda5744cadaca9c">NetMQ_test_project.AutoClicker.SetCursorPos</references>
+        <references refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1a82ff05dddfc7a9f2ca9a628d5242405c" compoundref="_p_o_i_n_t_8cs" startline="5">NetMQ_test_project.POINT.X</references>
+        <references refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1afe740ea30cf4103a68fe507efbd87b7a" compoundref="_p_o_i_n_t_8cs" startline="6">NetMQ_test_project.POINT.Y</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1acb94d9c2f7b707cda941137629570869" compoundref="_autoclicker_8cs" startline="89" endline="105">NetMQ_test_project.AutoClicker.Test</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.ClickSell</definition>
+        <argsstring>()</argsstring>
+        <name>ClickSell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="81" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="81" bodyend="88"/>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1aed93c11256cdbec1a78a94efc44d8c27" compoundref="_autoclicker_8cs" startline="28">NetMQ_test_project.AutoClicker._sellPos</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" compoundref="_autoclicker_8cs" startline="69" endline="73">NetMQ_test_project.AutoClicker.Click</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1adbe197665414dcce1cda5744cadaca9c">NetMQ_test_project.AutoClicker.SetCursorPos</references>
+        <references refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1a82ff05dddfc7a9f2ca9a628d5242405c" compoundref="_p_o_i_n_t_8cs" startline="5">NetMQ_test_project.POINT.X</references>
+        <references refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1afe740ea30cf4103a68fe507efbd87b7a" compoundref="_p_o_i_n_t_8cs" startline="6">NetMQ_test_project.POINT.Y</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1acb94d9c2f7b707cda941137629570869" compoundref="_autoclicker_8cs" startline="89" endline="105">NetMQ_test_project.AutoClicker.Test</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_auto_clicker_1acb94d9c2f7b707cda941137629570869" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NetMQ_test_project.AutoClicker.Test</definition>
+        <argsstring>()</argsstring>
+        <name>Test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="89" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="89" bodyend="105"/>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" compoundref="_autoclicker_8cs" startline="74" endline="80">NetMQ_test_project.AutoClicker.ClickBuy</references>
+        <references refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" compoundref="_autoclicker_8cs" startline="81" endline="88">NetMQ_test_project.AutoClicker.ClickSell</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>NetMQ_test_project.AutoClicker</label>
+        <link refid="class_net_m_q__test__project_1_1_auto_clicker"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_sellPos</edgelabel>
+          <edgelabel>_buyPos</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NetMQ_test_project.POINT</label>
+        <link refid="struct_net_m_q__test__project_1_1_p_o_i_n_t"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" line="12" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Autoclicker.cs" bodystart="11" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1afc0d0ce66ba9f652b83d9390d8ec5a68" prot="private" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>_buyPos</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1aed93c11256cdbec1a78a94efc44d8c27" prot="private" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>_sellPos</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" prot="private" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>Click</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>ClickBuy</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>ClickSell</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a85a337bca7a28342096288d77f10d22c" prot="private" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>GetCursorPos</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a1be4a7dc3960b2f9242abde6f8eadc5a" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>mouse_event</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a8d0dbf24fe6ddb387089cdc0ce4f4c3a" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>MOUSEEVENTF_LEFTDOWN</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1af2aebac5e94ed5ef01c7191cf08158f0" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>MOUSEEVENTF_LEFTUP</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a84bdb840ece749ca6314378675008051" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>SetBuyPos</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1adbe197665414dcce1cda5744cadaca9c" prot="private" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>SetCursorPos</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a8e680b0030adeb31405dfd73e3bec73a" prot="private" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>SetPos</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a2b997b35cecfc609c6a373e9b03511f8" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>SetSellPos</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a5f1ccb801a11f933dc7b2bbf16947c19" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>ShowPositions</name></member>
+      <member refid="class_net_m_q__test__project_1_1_auto_clicker_1acb94d9c2f7b707cda941137629570869" prot="public" virt="non-virtual"><scope>NetMQ_test_project::AutoClicker</scope><name>Test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

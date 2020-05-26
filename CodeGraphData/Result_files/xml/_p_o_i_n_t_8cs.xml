@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_p_o_i_n_t_8cs" kind="file">
+    <compoundname>POINT.cs</compoundname>
+    <innerclass refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" prot="public">NetMQ_test_project::POINT</innerclass>
+    <innernamespace refid="namespace_net_m_q__test__project">NetMQ_test_project</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">NetMQ_test_project</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" kindref="compound">POINT</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1a82ff05dddfc7a9f2ca9a628d5242405c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1a82ff05dddfc7a9f2ca9a628d5242405c" kindref="member">X</ref>;</highlight></codeline>
+<codeline lineno="6" refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1afe740ea30cf4103a68fe507efbd87b7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1afe740ea30cf4103a68fe507efbd87b7a" kindref="member">Y</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/POINT.cs"/>
+  </compounddef>
+</doxygen>

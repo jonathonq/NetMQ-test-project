@@ -3,7 +3,7 @@ using System.Threading;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Drawing;
-
+using System.Diagnostics;
 
 namespace NetMQ_test_project
 {
@@ -33,14 +33,14 @@ namespace NetMQ_test_project
             //AutoClicker.SetSellPos();
            // AutoClicker.Test();
             // Create instance of Connection passing values server, port, Id
-            var connection = new Connection("ny4", "44008");
+            var connection = new Connection("testserver", "44031");
 
 
 
 
             List<string> UserDefinedIndicators = new List<string> // Which topics/indicator IDs to listen for
             {
-                "00059"
+                "30000"
             };
             Console.WriteLine("Inputted Indicators are: ");
             foreach(string id in UserDefinedIndicators)
@@ -67,7 +67,7 @@ namespace NetMQ_test_project
                         break;
                 }
                 indicators[UserDefinedIndicators.IndexOf(id)].TradingRules = TradingRules.DefineByInput(indicators[UserDefinedIndicators.IndexOf(id)]);
-
+                Console.WriteLine(indicators[UserDefinedIndicators.IndexOf(id)].TradingRules.DisplayRules());
 
             }
             
@@ -78,7 +78,7 @@ namespace NetMQ_test_project
             foreach (var id in UserDefinedIndicators)
             {
 
-                AllTradingRules.Add( new TradingRules(id,1,">", 10, "<", 10));
+                AllTradingRules.Add( new TradingRules(id,RulesInputType.Deviation,1,">", 10, "<", 10));
 
                 //Console.WriteLine(AllTradingRules[UserDefinedIndicators.IndexOf(id)].DisplayRules());
 
@@ -88,14 +88,15 @@ namespace NetMQ_test_project
 
             AutoClicker.SetBuyPos();
             AutoClicker.SetSellPos();
-            
 
 
 
             List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
             foreach(string message in Messages)
             {
-                Message currentMessage = new Message(message);
+                var stopWatch = new Stopwatch();
+
+                stopWatch.Start();                Message currentMessage = new Message(message);
                 //CadRetailSalesMoM.GenerateSignal(newMessage.GetData());
                 Console.WriteLine("\nID: {0} |  Data: {1}", currentMessage.GetID(), currentMessage.GetData());
 
@@ -109,18 +110,22 @@ namespace NetMQ_test_project
                         {
                             case "sell":
                                 AutoClicker.ClickSell();
+                                stopWatch.Stop();
                                 Console.WriteLine("Sell signal");
+                                Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
                                 break;
                             case "buy":
                                 AutoClicker.ClickBuy();
+                                stopWatch.Stop();
                                 Console.WriteLine("Buy signal");
+                                Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
                                 break;
                             default:
                                 Console.WriteLine("No Signal");
+                                Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
                                 break;
                         }
-                        indicator.TradingRules.GenerateSignal(currentMessage.GetData());
-
+                        
                     }
                 }
 

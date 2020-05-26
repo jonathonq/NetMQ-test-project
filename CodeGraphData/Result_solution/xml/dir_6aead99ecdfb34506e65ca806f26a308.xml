@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_6aead99ecdfb34506e65ca806f26a308" kind="dir">
+    <compoundname>C:/Users/Administrator/source/repos/NetMQ test project</compoundname>
+    <innerdir refid="dir_498f3923f61f83043e8b11d584454b2a">C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/"/>
+  </compounddef>
+</doxygen>

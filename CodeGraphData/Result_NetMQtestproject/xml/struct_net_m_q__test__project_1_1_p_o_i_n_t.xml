@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_net_m_q__test__project_1_1_p_o_i_n_t" kind="struct" prot="public">
+    <compoundname>NetMQ_test_project::POINT</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_net_m_q__test__project_1_1_p_o_i_n_t_1a82ff05dddfc7a9f2ca9a628d5242405c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NetMQ_test_project.POINT.X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/POINT.cs" line="5" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/POINT.cs" bodystart="5" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" compoundref="_autoclicker_8cs" startline="74" endline="80">NetMQ_test_project.AutoClicker.ClickBuy</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" compoundref="_autoclicker_8cs" startline="81" endline="88">NetMQ_test_project.AutoClicker.ClickSell</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_net_m_q__test__project_1_1_p_o_i_n_t_1afe740ea30cf4103a68fe507efbd87b7a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NetMQ_test_project.POINT.Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/POINT.cs" line="6" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/POINT.cs" bodystart="6" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" compoundref="_autoclicker_8cs" startline="74" endline="80">NetMQ_test_project.AutoClicker.ClickBuy</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" compoundref="_autoclicker_8cs" startline="81" endline="88">NetMQ_test_project.AutoClicker.ClickSell</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/POINT.cs" line="4" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/POINT.cs" bodystart="3" bodyend="7"/>
+    <listofallmembers>
+      <member refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1a82ff05dddfc7a9f2ca9a628d5242405c" prot="public" virt="non-virtual"><scope>NetMQ_test_project::POINT</scope><name>X</name></member>
+      <member refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1afe740ea30cf4103a68fe507efbd87b7a" prot="public" virt="non-virtual"><scope>NetMQ_test_project::POINT</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

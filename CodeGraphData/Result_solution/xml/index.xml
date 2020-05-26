@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_net_m_q__test__project_1_1_auto_clicker" kind="class"><name>NetMQ_test_project::AutoClicker</name>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a8d0dbf24fe6ddb387089cdc0ce4f4c3a" kind="variable"><name>MOUSEEVENTF_LEFTDOWN</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1af2aebac5e94ed5ef01c7191cf08158f0" kind="variable"><name>MOUSEEVENTF_LEFTUP</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1afc0d0ce66ba9f652b83d9390d8ec5a68" kind="variable"><name>_buyPos</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1aed93c11256cdbec1a78a94efc44d8c27" kind="variable"><name>_sellPos</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a85a337bca7a28342096288d77f10d22c" kind="function"><name>GetCursorPos</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1adbe197665414dcce1cda5744cadaca9c" kind="function"><name>SetCursorPos</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a1be4a7dc3960b2f9242abde6f8eadc5a" kind="function"><name>mouse_event</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a8e680b0030adeb31405dfd73e3bec73a" kind="function"><name>SetPos</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" kind="function"><name>Click</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a84bdb840ece749ca6314378675008051" kind="function"><name>SetBuyPos</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a2b997b35cecfc609c6a373e9b03511f8" kind="function"><name>SetSellPos</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a5f1ccb801a11f933dc7b2bbf16947c19" kind="function"><name>ShowPositions</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" kind="function"><name>ClickBuy</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" kind="function"><name>ClickSell</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1acb94d9c2f7b707cda941137629570869" kind="function"><name>Test</name></member>
+  </compound>
+  <compound refid="class_net_m_q__test__project_1_1_connection" kind="class"><name>NetMQ_test_project::Connection</name>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a58da48dda48d0a59bc323d1f6d86175c" kind="variable"><name>Ip</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a85d581811a209f8d9373b280bfb064d8" kind="variable"><name>Port</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a44a4418c29f92adaa14043dad824db42" kind="variable"><name>Address</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a7d0e73833f1dc4df5fe7bb4d5debf64c" kind="function"><name>Connection</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1afb0ac42dcf21f8c72749025209c79bcc" kind="function"><name>ListenForMessages</name></member>
+  </compound>
+  <compound refid="class_net_m_q__test__project_1_1_indicator" kind="class"><name>NetMQ_test_project::Indicator</name>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1aa125b788e369c542e249c1c274336233" kind="variable"><name>_id</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1ac64029ef83b95039d116ad008514d141" kind="variable"><name>_name</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1abf82312f40a3d864734aba289f0faa22" kind="variable"><name>_consensus</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1a28ed345e8e87eb55f1f47ee993f6235b" kind="variable"><name>IndicatorNames</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1a5a5738cb942ff0a127e22809d14d3c3e" kind="property"><name>TradingRules</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1a34a6af0cfe3ba1b005e633b83ee5bc9c" kind="property"><name>Signal</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1aa578a9bc29205f125e45d21466aa6ae0" kind="function"><name>Indicator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1ae67c3fb68e1ba3fc23c05859255789f5" kind="function"><name>Indicator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1ab866890b8c8bbd6548e5498a355120be" kind="function"><name>Indicator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1a877d496256dde0fab792362137a57aac" kind="function"><name>GetId</name></member>
+    <member refid="class_net_m_q__test__project_1_1_indicator_1a7008de29741ca8efb2d8204977678997" kind="function"><name>DisplayTradingRules</name></member>
+  </compound>
+  <compound refid="class_net_m_q__test__project_1_1_message" kind="class"><name>NetMQ_test_project::Message</name>
+    <member refid="class_net_m_q__test__project_1_1_message_1a52924895b6ab1236f32969e6878b1bda" kind="variable"><name>_originalString</name></member>
+    <member refid="class_net_m_q__test__project_1_1_message_1aebefad4089126df272171069284d2d7f" kind="variable"><name>_id</name></member>
+    <member refid="class_net_m_q__test__project_1_1_message_1a974f819cb09551d4b796fd5e08d1fa34" kind="variable"><name>_data</name></member>
+    <member refid="class_net_m_q__test__project_1_1_message_1ae3f65be0f42e599d5490548f38b67bf4" kind="function"><name>Message</name></member>
+    <member refid="class_net_m_q__test__project_1_1_message_1a2fa8016fb74f072f23e6c9c74b9c5818" kind="function"><name>GetID</name></member>
+    <member refid="class_net_m_q__test__project_1_1_message_1a7923701336633cecab6a489b0630e996" kind="function"><name>GetData</name></member>
+    <member refid="class_net_m_q__test__project_1_1_message_1a29fb133dcc9c35a627245d8d372250ca" kind="function"><name>GetOriginalString</name></member>
+  </compound>
+  <compound refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" kind="struct"><name>NetMQ_test_project::POINT</name>
+    <member refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1a82ff05dddfc7a9f2ca9a628d5242405c" kind="variable"><name>X</name></member>
+    <member refid="struct_net_m_q__test__project_1_1_p_o_i_n_t_1afe740ea30cf4103a68fe507efbd87b7a" kind="variable"><name>Y</name></member>
+  </compound>
+  <compound refid="class_net_m_q__test__project_1_1_program" kind="class"><name>NetMQ_test_project::Program</name>
+    <member refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="class_net_m_q__test__project_1_1_trading_rules" kind="class"><name>NetMQ_test_project::TradingRules</name>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa4b462776ecb1c0395e0464468c15ff5" kind="property"><name>IndicatorID</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec68fc1583e4a0d3cacbd5474ec9be47" kind="variable"><name>_consensus</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aede47c7f035184d96bca8f12cf3d298f" kind="variable"><name>_buyTrigger</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" kind="variable"><name>_buyOperator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a91e359fb0deaa5975be0eeb3af47f744" kind="variable"><name>_sellTrigger</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" kind="variable"><name>_sellOperator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a3968107c4e531e764a13d40bbf6e21f1" kind="variable"><name>_displayRules</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" kind="function"><name>TradingRules</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a4856a1774fe7c91f3bccaf9ec8ff4a5f" kind="function"><name>SetBuyTrigger</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a294011c3a9b9988b9a92f6aadafe52b3" kind="function"><name>SetSellTrigger</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" kind="function"><name>GenerateSignal</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" kind="function"><name>DisplayRules</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a19ae8abef4a9958dcb3bc867eb63f59b" kind="function"><name>Operator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1adb52d786539dbc17607a560da85272e2" kind="function"><name>IsOperator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a7977688c380e4f588e548510b6dd56b1" kind="function"><name>GetDeviation</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" kind="function"><name>DefineByInput</name></member>
+  </compound>
+  <compound refid="namespace_net_m_q" kind="namespace"><name>NetMQ</name>
+  </compound>
+  <compound refid="namespace_net_m_q_1_1_sockets" kind="namespace"><name>NetMQ::Sockets</name>
+  </compound>
+  <compound refid="namespace_net_m_q__test__project" kind="namespace"><name>NetMQ_test_project</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_drawing" kind="namespace"><name>System::Drawing</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services_1_1_com_types" kind="namespace"><name>System::Runtime::InteropServices::ComTypes</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services_1_1_windows_runtime" kind="namespace"><name>System::Runtime::InteropServices::WindowsRuntime</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows" kind="namespace"><name>System::Windows</name>
+  </compound>
+  <compound refid="_autoclicker_8cs" kind="file"><name>Autoclicker.cs</name>
+  </compound>
+  <compound refid="_connection_8cs" kind="file"><name>Connection.cs</name>
+  </compound>
+  <compound refid="_indicator_8cs" kind="file"><name>Indicator.cs</name>
+  </compound>
+  <compound refid="_message_8cs" kind="file"><name>Message.cs</name>
+  </compound>
+  <compound refid="_p_o_i_n_t_8cs" kind="file"><name>POINT.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_trading_rules_8cs" kind="file"><name>TradingRules.cs</name>
+  </compound>
+  <compound refid="dir_f5a64b234f02e1092a864658d81f0002" kind="dir"><name>C:/Users/Administrator</name>
+  </compound>
+  <compound refid="dir_498f3923f61f83043e8b11d584454b2a" kind="dir"><name>C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project</name>
+  </compound>
+  <compound refid="dir_6aead99ecdfb34506e65ca806f26a308" kind="dir"><name>C:/Users/Administrator/source/repos/NetMQ test project</name>
+  </compound>
+  <compound refid="dir_1b4649223df9d90043920590e3f234d3" kind="dir"><name>C:/Users/Administrator/source/repos</name>
+  </compound>
+  <compound refid="dir_55daa0dc0c9f3b2d675d96e56a69e565" kind="dir"><name>C:/Users/Administrator/source</name>
+  </compound>
+  <compound refid="dir_d522931ffa1371640980b621734a4381" kind="dir"><name>C:/Users</name>
+  </compound>
+</doxygenindex>

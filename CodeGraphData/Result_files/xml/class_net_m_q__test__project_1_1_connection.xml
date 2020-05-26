@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_net_m_q__test__project_1_1_connection" kind="class" prot="public">
+    <compoundname>NetMQ_test_project::Connection</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_connection_1a58da48dda48d0a59bc323d1f6d86175c" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string NetMQ_test_project.Connection.Ip</definition>
+        <argsstring></argsstring>
+        <name>Ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" line="10" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_connection_1a7d0e73833f1dc4df5fe7bb4d5debf64c" compoundref="_connection_8cs" startline="14" endline="36">NetMQ_test_project.Connection.Connection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_connection_1a85d581811a209f8d9373b280bfb064d8" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string NetMQ_test_project.Connection.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" line="11" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_connection_1a7d0e73833f1dc4df5fe7bb4d5debf64c" compoundref="_connection_8cs" startline="14" endline="36">NetMQ_test_project.Connection.Connection</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_connection_1a44a4418c29f92adaa14043dad824db42" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Connection.Address</definition>
+        <argsstring></argsstring>
+        <name>Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" line="12" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_connection_1a7d0e73833f1dc4df5fe7bb4d5debf64c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetMQ_test_project.Connection.Connection</definition>
+        <argsstring>(string server, string port)</argsstring>
+        <name>Connection</name>
+        <param>
+          <type>string</type>
+          <declname>server</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" line="14" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" bodystart="14" bodyend="36"/>
+        <references refid="class_net_m_q__test__project_1_1_connection_1a58da48dda48d0a59bc323d1f6d86175c" compoundref="_connection_8cs" startline="10">NetMQ_test_project.Connection.Ip</references>
+        <references refid="class_net_m_q__test__project_1_1_connection_1a85d581811a209f8d9373b280bfb064d8" compoundref="_connection_8cs" startline="11">NetMQ_test_project.Connection.Port</references>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_connection_1afb0ac42dcf21f8c72749025209c79bcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; NetMQ_test_project.Connection.ListenForMessages</definition>
+        <argsstring>(List&lt; string &gt; indicatorIds)</argsstring>
+        <name>ListenForMessages</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>indicatorIds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" line="39" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" bodystart="39" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" line="9" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" bodystart="9" bodyend="79"/>
+    <listofallmembers>
+      <member refid="class_net_m_q__test__project_1_1_connection_1a44a4418c29f92adaa14043dad824db42" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Connection</scope><name>Address</name></member>
+      <member refid="class_net_m_q__test__project_1_1_connection_1a7d0e73833f1dc4df5fe7bb4d5debf64c" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Connection</scope><name>Connection</name></member>
+      <member refid="class_net_m_q__test__project_1_1_connection_1a58da48dda48d0a59bc323d1f6d86175c" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Connection</scope><name>Ip</name></member>
+      <member refid="class_net_m_q__test__project_1_1_connection_1afb0ac42dcf21f8c72749025209c79bcc" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Connection</scope><name>ListenForMessages</name></member>
+      <member refid="class_net_m_q__test__project_1_1_connection_1a85d581811a209f8d9373b280bfb064d8" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Connection</scope><name>Port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

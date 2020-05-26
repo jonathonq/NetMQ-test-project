@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_net_m_q__test__project_1_1_indicator" kind="class" prot="public">
+    <compoundname>NetMQ_test_project::Indicator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_indicator_1aa125b788e369c542e249c1c274336233" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Indicator._id</definition>
+        <argsstring></argsstring>
+        <name>_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="8" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_indicator_1a877d496256dde0fab792362137a57aac" compoundref="_indicator_8cs" startline="233" endline="236">NetMQ_test_project.Indicator.GetId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_indicator_1ac64029ef83b95039d116ad008514d141" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Indicator._name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="9" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_indicator_1abf82312f40a3d864734aba289f0faa22" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetMQ_test_project.Indicator._consensus</definition>
+        <argsstring></argsstring>
+        <name>_consensus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="10" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_indicator_1a28ed345e8e87eb55f1f47ee993f6235b" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; int, string &gt;</type>
+        <definition>Dictionary&lt;int, string&gt; NetMQ_test_project.Indicator.IndicatorNames</definition>
+        <argsstring></argsstring>
+        <name>IndicatorNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="15" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_net_m_q__test__project_1_1_indicator_1a5a5738cb942ff0a127e22809d14d3c3e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_net_m_q__test__project_1_1_trading_rules" kindref="compound">TradingRules</ref></type>
+        <definition>TradingRules NetMQ_test_project.Indicator.TradingRules</definition>
+        <argsstring></argsstring>
+        <name>TradingRules</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="12" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_net_m_q__test__project_1_1_indicator_1a34a6af0cfe3ba1b005e633b83ee5bc9c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Indicator.Signal</definition>
+        <argsstring></argsstring>
+        <name>Signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="13" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_indicator_1aa578a9bc29205f125e45d21466aa6ae0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetMQ_test_project.Indicator.Indicator</definition>
+        <argsstring>(string id)</argsstring>
+        <name>Indicator</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="216" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="216" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_indicator_1ae67c3fb68e1ba3fc23c05859255789f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetMQ_test_project.Indicator.Indicator</definition>
+        <argsstring>(string id, string name)</argsstring>
+        <name>Indicator</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="222" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="222" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_indicator_1ab866890b8c8bbd6548e5498a355120be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetMQ_test_project.Indicator.Indicator</definition>
+        <argsstring>(string id, string name, double consensus)</argsstring>
+        <name>Indicator</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>consensus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="227" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="227" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_indicator_1a877d496256dde0fab792362137a57aac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Indicator.GetId</definition>
+        <argsstring>()</argsstring>
+        <name>GetId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="233" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="233" bodyend="236"/>
+        <references refid="class_net_m_q__test__project_1_1_indicator_1aa125b788e369c542e249c1c274336233" compoundref="_indicator_8cs" startline="8">NetMQ_test_project.Indicator._id</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="107" endline="167">NetMQ_test_project.TradingRules.DefineByInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_indicator_1a7008de29741ca8efb2d8204977678997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string NetMQ_test_project.Indicator.DisplayTradingRules</definition>
+        <argsstring>()</argsstring>
+        <name>DisplayTradingRules</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="238" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="238" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="7" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="6" bodyend="243"/>
+    <listofallmembers>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1abf82312f40a3d864734aba289f0faa22" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>_consensus</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1aa125b788e369c542e249c1c274336233" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>_id</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1ac64029ef83b95039d116ad008514d141" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>_name</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1a7008de29741ca8efb2d8204977678997" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>DisplayTradingRules</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1a877d496256dde0fab792362137a57aac" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>GetId</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1aa578a9bc29205f125e45d21466aa6ae0" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>Indicator</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1ae67c3fb68e1ba3fc23c05859255789f5" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>Indicator</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1ab866890b8c8bbd6548e5498a355120be" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>Indicator</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1a28ed345e8e87eb55f1f47ee993f6235b" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>IndicatorNames</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1a34a6af0cfe3ba1b005e633b83ee5bc9c" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>Signal</name></member>
+      <member refid="class_net_m_q__test__project_1_1_indicator_1a5a5738cb942ff0a127e22809d14d3c3e" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Indicator</scope><name>TradingRules</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
