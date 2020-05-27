@@ -6,6 +6,10 @@ using System.Data;
 
 namespace NetMQ_test_project
 {
+    public class ConflictManager
+    {
+
+    }
     public enum RulesInputType
     {
         Absolute,
@@ -19,13 +23,15 @@ namespace NetMQ_test_project
 
         RulesInputType RulesInputType;
 
+        private string _buyOperator;
+        private string _sellOperator;
+
+
         private double _buyDevTrigger;
         private double _buyAbsTrigger;
-        private string _buyOperator;
         
         private double _sellDevTrigger;
         private double _sellAbsTrigger;
-        private string _sellOperator;
 
 
         private string _displayRules;
@@ -34,12 +40,12 @@ namespace NetMQ_test_project
         {
             this.IndicatorID = id;
             this.RulesInputType = type;
-            this._consensus = cons;
 
+            this._consensus = cons;
             this._buyOperator = buyOper;
             this._sellOperator = sellOper;
 
-            if (type == RulesInputType.Absolute)
+            if (this.RulesInputType == RulesInputType.Absolute)
             {
                 //if rule is based on absolute figure then assign directly to AbsTriggers
                 //and calculate what deviation would be so it can be displayed later 
@@ -48,7 +54,7 @@ namespace NetMQ_test_project
                 this._sellAbsTrigger = sellTrigger;
                 this._sellDevTrigger = sellTrigger - cons;
             }
-            else if (type == RulesInputType.Deviation)
+            else if (this.RulesInputType == RulesInputType.Deviation)
             {
                 //if rule is based on a deviation figure then do the opposite
                 //better to calculate this now than when generating a signal
@@ -106,28 +112,30 @@ namespace NetMQ_test_project
             return act - cons;
         }
 
-        public string GenerateSignal(string data)
+        public Signal GenerateSignal(double data)
         {
-            double doubleData = double.Parse(data); // data comes as string so convert to double
+           
 
             //Checks if data matches buy absolute trigger (regardless of how it was inputted as)
-            if (Operator(_buyOperator, doubleData, _buyAbsTrigger))
+            if (Operator(_buyOperator, data, _buyAbsTrigger))
             {
 
-                return "buy";
+                return Signal.Buy;
                 //return String.Format("buy (Deviation: {0} is: {1} Trigger: {2})",dev, _buyOperator,_buyTrigger);
             }
-            else if (Operator(_sellOperator, doubleData, _sellAbsTrigger))
+            else if (Operator(_sellOperator, data, _sellAbsTrigger))
             {
-                return "sell";
+                return Signal.Sell;
                 //return String.Format("sell (Deviation: {0} is: {1} Trigger: {2})", dev, _sellOperator, _sellTrigger);
             }
             else
             {
-                return "No signal";
+                return Signal.No_Trade;
             }
 
         }
+
+        
 
         public string DisplayRules()
         {

@@ -5,12 +5,11 @@ namespace NetMQ_test_project
 {
     public class Indicator
     {
-        private string _id;
+        public string Id;
         private string _name;
         private double _consensus;
 
-        public TradingRules TradingRules { get; set; }
-        public string Signal { get; set; }
+        public TradingRules TradingRules;
 
         Dictionary<int, string> IndicatorNames = new Dictionary<int, string>
         {
@@ -215,7 +214,7 @@ namespace NetMQ_test_project
 
         public Indicator(string id)
         {
-            this._id = id;
+            this.Id = id;
 
 
         }
@@ -232,7 +231,7 @@ namespace NetMQ_test_project
 
         public string GetId()
         {
-            return _id;
+            return Id;
         }
 
         public string DisplayTradingRules()

@@ -92,42 +92,53 @@ namespace NetMQ_test_project
 
 
             List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
-            foreach(string message in Messages)
-            {
-                var stopWatch = new Stopwatch();
 
-                stopWatch.Start();                Message currentMessage = new Message(message);
+            var stopWatch = new Stopwatch();
+
+            foreach (string message in Messages)
+            {
+                  
+                Message currentMessage = new Message(message);
                 //CadRetailSalesMoM.GenerateSignal(newMessage.GetData());
                 Console.WriteLine("\nID: {0} |  Data: {1}", currentMessage.GetID(), currentMessage.GetData());
 
 
 
-                foreach (var indicator in indicators)
+                for (int i=0; i<indicators.Length;i++)
                 {
-                    if (currentMessage.GetID() == indicator.GetId())
+                    if (currentMessage._id == indicators[i].Id)
                     {
-                        switch (indicator.TradingRules.GenerateSignal(currentMessage.GetData()))
+                        stopWatch.Start();
+
+                        switch (indicators[i].TradingRules.GenerateSignal(currentMessage._data))
                         {
-                            case "sell":
+                            case Signal.Sell:
                                 AutoClicker.ClickSell();
-                                stopWatch.Stop();
-                                Console.WriteLine("Sell signal");
-                                Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
+                                //Console.WriteLine("Sell signal");
                                 break;
-                            case "buy":
+                            case Signal.Buy:
                                 AutoClicker.ClickBuy();
-                                stopWatch.Stop();
-                                Console.WriteLine("Buy signal");
-                                Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
+                                //Console.WriteLine("Buy signal");
                                 break;
                             default:
-                                Console.WriteLine("No Signal");
-                                Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
+                                //Console.WriteLine("No Signal");
                                 break;
                         }
-                        
+                        stopWatch.Stop();
+
+
+
+                        //Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
+
+
                     }
                 }
+
+                
+                TimeSpan ts = stopWatch.Elapsed;
+
+                string elapsedTime = (ts.TotalMilliseconds*1000).ToString();
+                Console.WriteLine("Time (microseconds):  " + elapsedTime);
 
 
 

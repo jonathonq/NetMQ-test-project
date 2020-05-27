@@ -75,14 +75,14 @@ namespace NetMQ_test_project
         {
             SetCursorPos(_buyPos.X, _buyPos.Y);
             Click();
-            Console.WriteLine("Buy Pos: {0},{1}", _buyPos.X, _buyPos.Y);
+            //Console.WriteLine("Buy Pos: {0},{1}", _buyPos.X, _buyPos.Y);
 
         }
         public static void ClickSell()
         {
             SetCursorPos(_sellPos.X, _sellPos.Y);
             Click();
-            Console.WriteLine("Sell Pos: {0},{1}", _sellPos.X, _sellPos.Y);
+            //Console.WriteLine("Sell Pos: {0},{1}", _sellPos.X, _sellPos.Y);
 
 
         }
