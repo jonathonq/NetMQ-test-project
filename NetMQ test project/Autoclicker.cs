@@ -8,11 +8,6 @@ using System.Runtime.CompilerServices;
 
 namespace NetMQ_test_project
 {
-    public struct POINT
-    {
-        public int X;
-        public int Y;
-    }
     public class AutoClicker
     {
         //invoking DLLs to have access to GetCursorPos, SetCursorPos, mouse_event 
@@ -70,6 +65,7 @@ namespace NetMQ_test_project
 
 
         }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void Click()
         {
             mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);

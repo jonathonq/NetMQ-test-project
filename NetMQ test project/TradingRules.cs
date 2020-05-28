@@ -9,6 +9,10 @@ using System.Net.Http.Headers;
 
 namespace NetMQ_test_project
 {
+    public class ConflictManager
+    {
+
+    }
     public enum RulesInputType
     {
         Absolute,
