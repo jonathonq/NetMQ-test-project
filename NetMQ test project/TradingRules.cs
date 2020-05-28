@@ -3,6 +3,9 @@ using System.Threading;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Data;
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic.CompilerServices;
+using System.Net.Http.Headers;
 
 namespace NetMQ_test_project
 {
@@ -25,6 +28,8 @@ namespace NetMQ_test_project
 
         private string _buyOperator;
         private string _sellOperator;
+        private Operator _buyOperator1;
+        private Operator _sellOperator1;
 
 
         private double _buyDevTrigger;
@@ -44,6 +49,9 @@ namespace NetMQ_test_project
             this._consensus = cons;
             this._buyOperator = buyOper;
             this._sellOperator = sellOper;
+            //this._buyOperator1 = ParseStringToOperator(buyOper);
+           // this._sellOperator1 = ParseStringToOperator(sellOper);
+
 
             if (this.RulesInputType == RulesInputType.Absolute)
             {
@@ -71,15 +79,20 @@ namespace NetMQ_test_project
         }
 
 
-        private static Boolean Operator(string logic, double x, double y)
+        private static Operator ParseStringToOperator(string logic)
         {
             switch (logic)
             {
-                case ">": return x > y;
-                case "<": return x < y;
-                case ">=": return x >= y;
-                case "<=": return x <= y;
-                case "==": return x == y;
+                case ">": return Operator.GreaterThan;
+                    //return x > y;
+                case "<": return Operator.LessThan;
+                     //return x < y;
+                case ">=": return Operator.GreaterOrEqualTo;
+                    //return x >= y;
+                case "<=": return Operator.LessOrEqualTo;
+                    //return x <= y;
+                case "==": return Operator.Equals;
+                    //return x == y;
                 default: throw new Exception("invalid logic set in trigger");
             }
         }
@@ -93,6 +106,15 @@ namespace NetMQ_test_project
             {
                 return false;
             }
+        }
+
+        private enum Operator
+        {
+            GreaterThan,
+            LessThan,
+            GreaterOrEqualTo,
+            LessOrEqualTo,
+            Equals
         }
 
 
@@ -111,19 +133,94 @@ namespace NetMQ_test_project
         {
             return act - cons;
         }
-
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Signal GenerateSignal(double data)
         {
-           
+            
+            switch (_buyOperator1)
+            {
+                case Operator.GreaterThan:
+                    if (data > _buyAbsTrigger)
+                    {
+                        return Signal.Buy;
+                    }
+                    break;
+                case Operator.LessThan:
+                    if (data < _buyAbsTrigger)
+                    {
+                        return Signal.Buy;
+                    }
+                    break;
+                case Operator.GreaterOrEqualTo:
+                    if (data >= _buyAbsTrigger)
+                    {
+                        return Signal.Buy;
+                    }
+                    break;
+                case Operator.LessOrEqualTo:
+                    if (data <= _buyAbsTrigger)
+                    {
+                        return Signal.Buy;
+                    }
+                    break;
+                case Operator.Equals:
+                    if (data == _buyAbsTrigger)
+                    {
+                        return Signal.Buy;
+                    }
+                    break;
+                default:
+                    //return Signal.No_Trade;
+                    break;
+            }
+            switch (_sellOperator1)
+            {
+                case Operator.GreaterThan:
+                    if (data > _sellAbsTrigger)
+                    {
+                        return Signal.Sell;
+                    }
+                    break;
+                case Operator.LessThan:
+                    if (data < _sellAbsTrigger)
+                    {
+                        return Signal.Sell;
+                    }
+                    break;
+                case Operator.GreaterOrEqualTo:
+                    if (data >= _sellAbsTrigger)
+                    {
+                        return Signal.Sell;
+                    }
+                    break;
+                case Operator.LessOrEqualTo:
+                    if (data <= _sellAbsTrigger)
+                    {
+                        return Signal.Sell;
+                    }
+                    break;
+                case Operator.Equals:
+                    if (data == _sellAbsTrigger)
+                    {
+                        return Signal.Sell;
+                    }
+                    break;
+                default:
+                    break;
+            }
 
+            return Signal.No_Trade;
+
+
+           /* 
             //Checks if data matches buy absolute trigger (regardless of how it was inputted as)
-            if (Operator(_buyOperator, data, _buyAbsTrigger))
+            if (ParseStringToOperator(_buyOperator, data, _buyAbsTrigger))
             {
 
                 return Signal.Buy;
                 //return String.Format("buy (Deviation: {0} is: {1} Trigger: {2})",dev, _buyOperator,_buyTrigger);
             }
-            else if (Operator(_sellOperator, data, _sellAbsTrigger))
+            else if (ParseStringToOperator(_sellOperator, data, _sellAbsTrigger))
             {
                 return Signal.Sell;
                 //return String.Format("sell (Deviation: {0} is: {1} Trigger: {2})", dev, _sellOperator, _sellTrigger);
@@ -131,7 +228,7 @@ namespace NetMQ_test_project
             else
             {
                 return Signal.No_Trade;
-            }
+            }*/
 
         }
 

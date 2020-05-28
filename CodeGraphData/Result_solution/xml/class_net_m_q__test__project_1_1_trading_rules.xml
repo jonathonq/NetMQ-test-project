@@ -14,8 +14,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="11" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="11" bodyend="-1"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" compoundref="_trading_rules_8cs" startline="23" endline="35">NetMQ_test_project.TradingRules.TradingRules</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="21" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" compoundref="_trading_rules_8cs" startline="39" endline="71">NetMQ_test_project.TradingRules.TradingRules</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -30,25 +30,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="12" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="12" bodyend="-1"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" compoundref="_trading_rules_8cs" startline="79" endline="100">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="22" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1aede47c7f035184d96bca8f12cf3d298f" prot="private" static="no" mutable="no">
-        <type>double</type>
-        <definition>double NetMQ_test_project.TradingRules._buyTrigger</definition>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1a57526af5d6ab0f5b7a89333729ea385e" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881" kindref="member">RulesInputType</ref></type>
+        <definition>RulesInputType NetMQ_test_project.TradingRules.RulesInputType</definition>
         <argsstring></argsstring>
-        <name>_buyTrigger</name>
+        <name>RulesInputType</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="14" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="14" bodyend="-1"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" compoundref="_trading_rules_8cs" startline="79" endline="100">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" compoundref="_trading_rules_8cs" startline="23" endline="35">NetMQ_test_project.TradingRules.TradingRules</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="24" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -61,24 +58,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="15" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="15" bodyend="-1"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" compoundref="_trading_rules_8cs" startline="79" endline="100">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" compoundref="_trading_rules_8cs" startline="23" endline="35">NetMQ_test_project.TradingRules.TradingRules</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1a91e359fb0deaa5975be0eeb3af47f744" prot="private" static="no" mutable="no">
-        <type>double</type>
-        <definition>double NetMQ_test_project.TradingRules._sellTrigger</definition>
-        <argsstring></argsstring>
-        <name>_sellTrigger</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="17" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="17" bodyend="-1"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" compoundref="_trading_rules_8cs" startline="79" endline="100">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" compoundref="_trading_rules_8cs" startline="23" endline="35">NetMQ_test_project.TradingRules.TradingRules</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="26" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="140" endline="144">NetMQ_test_project.TradingRules.DisplayRules</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" compoundref="_trading_rules_8cs" startline="115" endline="136">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" compoundref="_trading_rules_8cs" startline="39" endline="71">NetMQ_test_project.TradingRules.TradingRules</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -91,9 +74,70 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="18" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="18" bodyend="-1"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" compoundref="_trading_rules_8cs" startline="79" endline="100">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" compoundref="_trading_rules_8cs" startline="23" endline="35">NetMQ_test_project.TradingRules.TradingRules</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="27" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="140" endline="144">NetMQ_test_project.TradingRules.DisplayRules</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" compoundref="_trading_rules_8cs" startline="115" endline="136">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" compoundref="_trading_rules_8cs" startline="39" endline="71">NetMQ_test_project.TradingRules.TradingRules</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1a39addaded1e96c8de97a8333376eb0e7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetMQ_test_project.TradingRules._buyDevTrigger</definition>
+        <argsstring></argsstring>
+        <name>_buyDevTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="30" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="140" endline="144">NetMQ_test_project.TradingRules.DisplayRules</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" compoundref="_trading_rules_8cs" startline="39" endline="71">NetMQ_test_project.TradingRules.TradingRules</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1aec3ec0fa4550bc4475d1f0fc9ba777bf" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetMQ_test_project.TradingRules._buyAbsTrigger</definition>
+        <argsstring></argsstring>
+        <name>_buyAbsTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="31" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="140" endline="144">NetMQ_test_project.TradingRules.DisplayRules</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" compoundref="_trading_rules_8cs" startline="115" endline="136">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1a7aa11f78412997afdc2e8a8f2d6069df" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetMQ_test_project.TradingRules._sellDevTrigger</definition>
+        <argsstring></argsstring>
+        <name>_sellDevTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="33" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="140" endline="144">NetMQ_test_project.TradingRules.DisplayRules</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" compoundref="_trading_rules_8cs" startline="39" endline="71">NetMQ_test_project.TradingRules.TradingRules</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1aa74af292ab5c7914da1b02282ef428ce" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetMQ_test_project.TradingRules._sellAbsTrigger</definition>
+        <argsstring></argsstring>
+        <name>_sellAbsTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="34" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="140" endline="144">NetMQ_test_project.TradingRules.DisplayRules</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" compoundref="_trading_rules_8cs" startline="115" endline="136">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trading_rules_1a3968107c4e531e764a13d40bbf6e21f1" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -106,19 +150,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="21" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="21" bodyend="-1"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="102" endline="105">NetMQ_test_project.TradingRules.DisplayRules</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="37" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>NetMQ_test_project.TradingRules.TradingRules</definition>
-        <argsstring>(string id, double cons, string buyOper, double buyDev, string sellOper, double sellDev)</argsstring>
+        <argsstring>(string id, RulesInputType type, double cons, string buyOper, double buyTrigger, string sellOper, double sellTrigger)</argsstring>
         <name>TradingRules</name>
         <param>
           <type>string</type>
           <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881" kindref="member">RulesInputType</ref></type>
+          <declname>type</declname>
         </param>
         <param>
           <type>double</type>
@@ -130,7 +177,7 @@
         </param>
         <param>
           <type>double</type>
-          <declname>buyDev</declname>
+          <declname>buyTrigger</declname>
         </param>
         <param>
           <type>string</type>
@@ -138,7 +185,7 @@
         </param>
         <param>
           <type>double</type>
-          <declname>sellDev</declname>
+          <declname>sellTrigger</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -146,13 +193,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="23" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="23" bodyend="35"/>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" compoundref="_trading_rules_8cs" startline="15">NetMQ_test_project.TradingRules._buyOperator</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aede47c7f035184d96bca8f12cf3d298f" compoundref="_trading_rules_8cs" startline="14">NetMQ_test_project.TradingRules._buyTrigger</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" compoundref="_trading_rules_8cs" startline="18">NetMQ_test_project.TradingRules._sellOperator</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a91e359fb0deaa5975be0eeb3af47f744" compoundref="_trading_rules_8cs" startline="17">NetMQ_test_project.TradingRules._sellTrigger</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aa4b462776ecb1c0395e0464468c15ff5" compoundref="_trading_rules_8cs" startline="11">NetMQ_test_project.TradingRules.IndicatorID</references>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="107" endline="167">NetMQ_test_project.TradingRules.DefineByInput</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="39" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="39" bodyend="71"/>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a39addaded1e96c8de97a8333376eb0e7" compoundref="_trading_rules_8cs" startline="30">NetMQ_test_project.TradingRules._buyDevTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" compoundref="_trading_rules_8cs" startline="26">NetMQ_test_project.TradingRules._buyOperator</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a7aa11f78412997afdc2e8a8f2d6069df" compoundref="_trading_rules_8cs" startline="33">NetMQ_test_project.TradingRules._sellDevTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" compoundref="_trading_rules_8cs" startline="27">NetMQ_test_project.TradingRules._sellOperator</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aa4b462776ecb1c0395e0464468c15ff5" compoundref="_trading_rules_8cs" startline="21">NetMQ_test_project.TradingRules.IndicatorID</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="146" endline="206">NetMQ_test_project.TradingRules.DefineByInput</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1a4856a1774fe7c91f3bccaf9ec8ff4a5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -173,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="63" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="63" bodyend="67"/>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="99" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="99" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1a294011c3a9b9988b9a92f6aadafe52b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -194,15 +241,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="68" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="68" bodyend="72"/>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="104" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="104" bodyend="108"/>
       </memberdef>
-      <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>string</type>
-        <definition>string NetMQ_test_project.TradingRules.GenerateSignal</definition>
-        <argsstring>(string data)</argsstring>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccc" kindref="member">Signal</ref></type>
+        <definition>Signal NetMQ_test_project.TradingRules.GenerateSignal</definition>
+        <argsstring>(double data)</argsstring>
         <name>GenerateSignal</name>
         <param>
-          <type>string</type>
+          <type>double</type>
           <declname>data</declname>
         </param>
         <briefdescription>
@@ -211,14 +258,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="79" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="79" bodyend="100"/>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" compoundref="_trading_rules_8cs" startline="15">NetMQ_test_project.TradingRules._buyOperator</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aede47c7f035184d96bca8f12cf3d298f" compoundref="_trading_rules_8cs" startline="14">NetMQ_test_project.TradingRules._buyTrigger</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aec68fc1583e4a0d3cacbd5474ec9be47" compoundref="_trading_rules_8cs" startline="12">NetMQ_test_project.TradingRules._consensus</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" compoundref="_trading_rules_8cs" startline="18">NetMQ_test_project.TradingRules._sellOperator</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a91e359fb0deaa5975be0eeb3af47f744" compoundref="_trading_rules_8cs" startline="17">NetMQ_test_project.TradingRules._sellTrigger</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a7977688c380e4f588e548510b6dd56b1" compoundref="_trading_rules_8cs" startline="74" endline="77">NetMQ_test_project.TradingRules.GetDeviation</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a19ae8abef4a9958dcb3bc867eb63f59b" compoundref="_trading_rules_8cs" startline="38" endline="49">NetMQ_test_project.TradingRules.Operator</references>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="115" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="115" bodyend="136"/>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aec3ec0fa4550bc4475d1f0fc9ba777bf" compoundref="_trading_rules_8cs" startline="31">NetMQ_test_project.TradingRules._buyAbsTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" compoundref="_trading_rules_8cs" startline="26">NetMQ_test_project.TradingRules._buyOperator</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aa74af292ab5c7914da1b02282ef428ce" compoundref="_trading_rules_8cs" startline="34">NetMQ_test_project.TradingRules._sellAbsTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" compoundref="_trading_rules_8cs" startline="27">NetMQ_test_project.TradingRules._sellOperator</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a19ae8abef4a9958dcb3bc867eb63f59b" compoundref="_trading_rules_8cs" startline="74" endline="85">NetMQ_test_project.TradingRules.Operator</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" compoundref="_program_8cs" startline="13" endline="155">NetMQ_test_project.Program.Main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -231,8 +277,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="102" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="102" bodyend="105"/>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a3968107c4e531e764a13d40bbf6e21f1" compoundref="_trading_rules_8cs" startline="21">NetMQ_test_project.TradingRules._displayRules</references>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="140" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="140" bodyend="144"/>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aec3ec0fa4550bc4475d1f0fc9ba777bf" compoundref="_trading_rules_8cs" startline="31">NetMQ_test_project.TradingRules._buyAbsTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a39addaded1e96c8de97a8333376eb0e7" compoundref="_trading_rules_8cs" startline="30">NetMQ_test_project.TradingRules._buyDevTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" compoundref="_trading_rules_8cs" startline="26">NetMQ_test_project.TradingRules._buyOperator</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aa74af292ab5c7914da1b02282ef428ce" compoundref="_trading_rules_8cs" startline="34">NetMQ_test_project.TradingRules._sellAbsTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a7aa11f78412997afdc2e8a8f2d6069df" compoundref="_trading_rules_8cs" startline="33">NetMQ_test_project.TradingRules._sellDevTrigger</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" compoundref="_trading_rules_8cs" startline="27">NetMQ_test_project.TradingRules._sellOperator</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" compoundref="_program_8cs" startline="13" endline="155">NetMQ_test_project.Program.Main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -259,8 +311,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="38" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="38" bodyend="49"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" compoundref="_trading_rules_8cs" startline="79" endline="100">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="74" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="74" bodyend="85"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" compoundref="_trading_rules_8cs" startline="115" endline="136">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1adb52d786539dbc17607a560da85272e2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -277,8 +329,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="50" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="50" bodyend="60"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="107" endline="167">NetMQ_test_project.TradingRules.DefineByInput</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="86" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="86" bodyend="96"/>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="146" endline="206">NetMQ_test_project.TradingRules.DefineByInput</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -301,8 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="74" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="74" bodyend="77"/>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" compoundref="_trading_rules_8cs" startline="79" endline="100">NetMQ_test_project.TradingRules.GenerateSignal</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="110" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="110" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_net_m_q__test__project_1_1_trading_rules" kindref="compound">TradingRules</ref></type>
@@ -319,35 +370,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="107" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="107" bodyend="167"/>
-        <references refid="class_net_m_q__test__project_1_1_indicator_1a877d496256dde0fab792362137a57aac" compoundref="_indicator_8cs" startline="233" endline="236">NetMQ_test_project.Indicator.GetId</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1adb52d786539dbc17607a560da85272e2" compoundref="_trading_rules_8cs" startline="50" endline="60">NetMQ_test_project.TradingRules.IsOperator</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" compoundref="_trading_rules_8cs" startline="23" endline="35">NetMQ_test_project.TradingRules.TradingRules</references>
-        <referencedby refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" compoundref="_program_8cs" startline="13" endline="134">NetMQ_test_project.Program.Main</referencedby>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="146" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="146" bodyend="206"/>
+        <references refid="class_net_m_q__test__project_1_1_indicator_1a877d496256dde0fab792362137a57aac" compoundref="_indicator_8cs" startline="232" endline="235">NetMQ_test_project.Indicator.GetId</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1adb52d786539dbc17607a560da85272e2" compoundref="_trading_rules_8cs" startline="86" endline="96">NetMQ_test_project.TradingRules.IsOperator</references>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" compoundref="_trading_rules_8cs" startline="39" endline="71">NetMQ_test_project.TradingRules.TradingRules</references>
+        <referencedby refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" compoundref="_program_8cs" startline="13" endline="155">NetMQ_test_project.Program.Main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="9" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="8" bodyend="169"/>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="19" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="18" bodyend="208"/>
     <listofallmembers>
+      <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec3ec0fa4550bc4475d1f0fc9ba777bf" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_buyAbsTrigger</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trading_rules_1a39addaded1e96c8de97a8333376eb0e7" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_buyDevTrigger</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_buyOperator</name></member>
-      <member refid="class_net_m_q__test__project_1_1_trading_rules_1aede47c7f035184d96bca8f12cf3d298f" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_buyTrigger</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec68fc1583e4a0d3cacbd5474ec9be47" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_consensus</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1a3968107c4e531e764a13d40bbf6e21f1" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_displayRules</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa74af292ab5c7914da1b02282ef428ce" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_sellAbsTrigger</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trading_rules_1a7aa11f78412997afdc2e8a8f2d6069df" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_sellDevTrigger</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_sellOperator</name></member>
-      <member refid="class_net_m_q__test__project_1_1_trading_rules_1a91e359fb0deaa5975be0eeb3af47f744" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>_sellTrigger</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>DefineByInput</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>DisplayRules</name></member>
-      <member refid="class_net_m_q__test__project_1_1_trading_rules_1a52fa9f54fba715ce26d7120e4417240b" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>GenerateSignal</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>GenerateSignal</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1a7977688c380e4f588e548510b6dd56b1" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>GetDeviation</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa4b462776ecb1c0395e0464468c15ff5" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>IndicatorID</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1adb52d786539dbc17607a560da85272e2" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>IsOperator</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1a19ae8abef4a9958dcb3bc867eb63f59b" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>Operator</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trading_rules_1a57526af5d6ab0f5b7a89333729ea385e" prot="private" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>RulesInputType</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1a4856a1774fe7c91f3bccaf9ec8ff4a5f" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>SetBuyTrigger</name></member>
       <member refid="class_net_m_q__test__project_1_1_trading_rules_1a294011c3a9b9988b9a92f6aadafe52b3" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>SetSellTrigger</name></member>
-      <member refid="class_net_m_q__test__project_1_1_trading_rules_1ab60c6bb6e04b15b347ca5be529ce58cc" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>TradingRules</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" prot="public" virt="non-virtual"><scope>NetMQ_test_project::TradingRules</scope><name>TradingRules</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -65,12 +65,13 @@ namespace NetMQ_test_project
 
 
         }
-
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void Click()
         {
             mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
             mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ClickBuy()
         {
             SetCursorPos(_buyPos.X, _buyPos.Y);
@@ -78,6 +79,7 @@ namespace NetMQ_test_project
             //Console.WriteLine("Buy Pos: {0},{1}", _buyPos.X, _buyPos.Y);
 
         }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ClickSell()
         {
             SetCursorPos(_sellPos.X, _sellPos.Y);

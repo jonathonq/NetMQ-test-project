@@ -8,7 +8,72 @@
     <innerclass refid="class_net_m_q__test__project_1_1_message" prot="public">NetMQ_test_project::Message</innerclass>
     <innerclass refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" prot="public">NetMQ_test_project::POINT</innerclass>
     <innerclass refid="class_net_m_q__test__project_1_1_program" prot="package">NetMQ_test_project::Program</innerclass>
+    <innerclass refid="class_net_m_q__test__project_1_1_conflict_manager" prot="public">NetMQ_test_project::ConflictManager</innerclass>
     <innerclass refid="class_net_m_q__test__project_1_1_trading_rules" prot="public">NetMQ_test_project::TradingRules</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccc" prot="public" static="no">
+        <name>Signal</name>
+        <enumvalue id="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccca831a28f1e8df07c553fcd59546465d13" prot="public">
+          <name>Buy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccca3068c5a98c003498f1fec0c489212e8b" prot="public">
+          <name>Sell</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccca3a754dd3df0dbd9fbb87ccf2b7f632db" prot="public">
+          <name>No_Trade</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedecccaf1d4ac54357cc0932f385d56814ba7e4" prot="public">
+          <name>Conflict</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Signal.cs" line="4" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Signal.cs" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881" prot="public" static="no">
+        <name>RulesInputType</name>
+        <enumvalue id="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881ab51ca26c6c89cfc9bec338f7a0d3e0c8" prot="public">
+          <name>Absolute</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881a5701b8b69f5521e8a98bacb8bf75933b" prot="public">
+          <name>Deviation</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="14" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="13" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

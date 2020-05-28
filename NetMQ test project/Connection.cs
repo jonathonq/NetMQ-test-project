@@ -36,10 +36,10 @@ namespace NetMQ_test_project
         }
 
 
-        public List<string> ListenForMessages(List<string> indicatorIds)
+        public string[] ListenForMessages(string[] indicatorIds)
         {
             bool Listening = true;
-            var OutputList = new List<string>();
+            var output = new string[indicatorIds.Length];
 
             // NetMQ open socket connection & subscribe
             var subscriber = new SubscriberSocket();
@@ -59,22 +59,14 @@ namespace NetMQ_test_project
             subscriber.Options.TcpKeepaliveInterval = new System.TimeSpan(0, 0, 75);
 
 
-            while (Listening == true)
+
+            for (int i = 0; i < indicatorIds.Length; i++)
             {
-                //
-                string MessageReceived = subscriber.ReceiveFrameString();
-                OutputList.Add(MessageReceived);
-
-
-                if(OutputList.Count() == indicatorIds.Count())
-                {
-                    Listening = false;
-                }
-
+                output[i] = subscriber.ReceiveFrameString();
             }
 
 
-            return OutputList;
+            return output;
         }
     }
     

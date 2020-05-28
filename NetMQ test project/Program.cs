@@ -58,15 +58,20 @@ namespace NetMQ_test_project
                 {
                     case "yes":
                     case "y":
+                        indicators[UserDefinedIndicators.IndexOf(id)].TradingRules = TradingRules.DefineByInput(indicators[UserDefinedIndicators.IndexOf(id)]);
                         break;
                     case "no":
                     case "n":
+                        foreach(var indicator in indicators)
+                        {
+                            indicator.TradingRules = new TradingRules(id, RulesInputType.Deviation, 1, "<", 10, ">", 10);
+                        }
+                        break;
 
                     default:
                         Console.WriteLine("Invalid input. No Rules set for {0}", id);
                         break;
                 }
-                indicators[UserDefinedIndicators.IndexOf(id)].TradingRules = TradingRules.DefineByInput(indicators[UserDefinedIndicators.IndexOf(id)]);
                 Console.WriteLine(indicators[UserDefinedIndicators.IndexOf(id)].TradingRules.DisplayRules());
 
             }
@@ -88,27 +93,39 @@ namespace NetMQ_test_project
 
             AutoClicker.SetBuyPos();
             AutoClicker.SetSellPos();
+            var indiArray = new string[UserDefinedIndicators.Count];
+            for (int i = 0; i < indiArray.Length; i++)
+            {
+                indiArray[i] = UserDefinedIndicators[i];
+            }
+           
 
 
 
-            List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
+            //List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
+            string[] Messages = connection.ListenForMessages(indiArray);
+
 
             var stopWatch = new Stopwatch();
 
+
             foreach (string message in Messages)
             {
-                  
-                Message currentMessage = new Message(message);
-                //CadRetailSalesMoM.GenerateSignal(newMessage.GetData());
-                Console.WriteLine("\nID: {0} |  Data: {1}", currentMessage.GetID(), currentMessage.GetData());
 
+                Message currentMessage = new Message(message);
+
+                //Console.WriteLine(Messages.Count);
+
+                //CadRetailSalesMoM.GenerateSignal(newMessage.GetData());
+                //Console.WriteLine("\nID: {0} |  Data: {1}", currentMessage.GetID(), currentMessage.GetData());
+
+                stopWatch.Start();
 
 
                 for (int i=0; i<indicators.Length;i++)
                 {
                     if (currentMessage._id == indicators[i].Id)
                     {
-                        stopWatch.Start();
 
                         switch (indicators[i].TradingRules.GenerateSignal(currentMessage._data))
                         {
@@ -125,7 +142,13 @@ namespace NetMQ_test_project
                                 break;
                         }
                         stopWatch.Stop();
+                        TimeSpan ts = stopWatch.Elapsed;
 
+                        string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                        ts.Hours, ts.Minutes, ts.Seconds,
+                        ts.Milliseconds / 10);
+
+                        Console.WriteLine("RunTime " + elapsedTime);
 
 
                         //Console.WriteLine("StopWatch: {0}", stopWatch.Elapsed);
@@ -135,10 +158,7 @@ namespace NetMQ_test_project
                 }
 
                 
-                TimeSpan ts = stopWatch.Elapsed;
-
-                string elapsedTime = (ts.TotalMilliseconds*1000).ToString();
-                Console.WriteLine("Time (microseconds):  " + elapsedTime);
+                
 
 
 
