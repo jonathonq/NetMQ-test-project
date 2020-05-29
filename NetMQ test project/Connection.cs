@@ -1,15 +1,17 @@
-﻿using System;
-using NetMQ;
+﻿using NetMQ;
 using NetMQ.Sockets;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace NetMQ_test_project
 {
-    public class  Connection{
+    public class Connection
+    {
         private readonly string Ip;
-        private readonly string Port;           
+        private readonly string Port;
         public string Address;
+        public bool Listening = false;
+        public List<string> Received = null;
 
         public Connection(string server, string port)
         {
@@ -18,56 +20,44 @@ namespace NetMQ_test_project
                 case "ny4":
                     this.Ip = "173.214.169.6";
                     break;
+
                 case "ny2":
                     this.Ip = "38.65.25.118";
                     break;
+
                 case "testserver":
                     this.Ip = "66.70.190.253";
                     break;
+
                 default:
-                    Console.WriteLine("Invalid input for server. Options are \"Ny4\", \"Ny2\" or \"test\" (not case-sensitive)" );
+                    Console.WriteLine("Invalid input for server. Options are \"Ny4\", \"Ny2\" or \"test\" (not case-sensitive)");
                     break;
             }
 
             this.Port = port;
-            this.Address = String.Format("tcp://{0}:{1}", Ip,  Port);
-                
-                
+            this.Address = String.Format("tcp://{0}:{1}", Ip, Port);
         }
 
-
-        public string[] ListenForMessages(string[] indicatorIds)
+        public void ListenForMessages()
         {
-            bool Listening = true;
-            var output = new string[indicatorIds.Length];
+            Listening = true;
 
             // NetMQ open socket connection & subscribe
             var subscriber = new SubscriberSocket();
             subscriber.Connect(this.Address);
             Console.WriteLine("Connecting to: " + this.Address);
 
-            foreach (string indicator in indicatorIds) 
-            { 
-                subscriber.Subscribe(indicator);
-                Console.WriteLine("Subscribing to: " + indicator);
-            }
-            //subscriber.SubscribeToAnyTopic();
+            subscriber.SubscribeToAnyTopic();
 
             // IMPORTANT: configure TCP keepalive settings
             subscriber.Options.TcpKeepalive = true;
             subscriber.Options.TcpKeepaliveIdle = new System.TimeSpan(0, 0, 75);
             subscriber.Options.TcpKeepaliveInterval = new System.TimeSpan(0, 0, 75);
 
-
-
-            for (int i = 0; i < indicatorIds.Length; i++)
+            while (Listening)
             {
-                output[i] = subscriber.ReceiveFrameString();
+                Received.Add(subscriber.ReceiveFrameString());
             }
-
-
-            return output;
         }
     }
-    
 }
