@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace NetMQ_test_project
 {
@@ -10,7 +11,7 @@ namespace NetMQ_test_project
 
         public TradingRules TradingRules;
 
-        private Dictionary<int, string> IndicatorNames = new Dictionary<int, string>
+        Dictionary<int, string> IndicatorNames = new Dictionary<int, string>
         {
             {30000, "Crude Oil Inventories WoW"},
             {30001, "Motor Gasoline Inventories WoW"},
@@ -214,16 +215,16 @@ namespace NetMQ_test_project
         public Indicator(string id)
         {
             this.Id = id;
-        }
 
+
+        }
         public Indicator(string id, string name)
-            : this(id)
+            :this(id)
         {
             this._name = name;
         }
-
         public Indicator(string id, string name, double consensus)
-            : this(id, name)
+            :this(id, name)
         {
             this._consensus = consensus;
         }
@@ -237,5 +238,6 @@ namespace NetMQ_test_project
         {
             return TradingRules.DisplayRules();
         }
+
     }
 }
