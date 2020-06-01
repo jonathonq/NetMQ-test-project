@@ -7,5 +7,4 @@
         No_Trade,
         Conflict
     }
-
 }

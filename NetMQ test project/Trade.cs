@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
+<<<<<<< HEAD
 using System.Threading;
+=======
+>>>>>>> 37ea97f8c9c6cab027dc5fc24188d17b523c37be
 
 namespace NetMQ_test_project
 {
@@ -17,6 +20,7 @@ namespace NetMQ_test_project
 
         public void Start()
         {
+<<<<<<< HEAD
 
             //Thread listenThread = new Thread(_connection.);
             
@@ -27,12 +31,21 @@ namespace NetMQ_test_project
             /*while (true)
             {
                 if (_connection.Received[0] != String.Empty)
+=======
+            _connection.ListenForMessages();
+            while (true)
+            {
+                if (_connection.Received != null)
+>>>>>>> 37ea97f8c9c6cab027dc5fc24188d17b523c37be
                 {
                     var stopWatch = new Stopwatch();
 
                     for (int i = 0; i < _indicators.Length; i++)
                     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 37ea97f8c9c6cab027dc5fc24188d17b523c37be
                         var msg = new Message(_connection.Received[i]);
                         if (msg._id == _indicators[i].Id)
                         {
@@ -62,7 +75,11 @@ namespace NetMQ_test_project
                         }
                     }
                 }
+<<<<<<< HEAD
             }*/
+=======
+            }
+>>>>>>> 37ea97f8c9c6cab027dc5fc24188d17b523c37be
         }
     }
 }
