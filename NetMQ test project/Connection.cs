@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using NetMQ;
 using NetMQ.Sockets;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace NetMQ_test_project
 {
@@ -10,8 +10,18 @@ namespace NetMQ_test_project
         private readonly string Ip;
         private readonly string Port;           
         public string Address;
+        private bool _listening = false;
 
-        public Connection(string server, string port)
+        private string[] _topics;
+
+        public string _lastRecieved;
+
+        public StringBuilder _recievedSb = new StringBuilder();
+        public List<string> _recievedList = new List<string>();
+        public string[] _recievedArray;
+        public int _recievedCount = 0;
+
+        public Connection(string server, string port, string[] topics)
         {
             switch (server.ToLower()) // Haawks servers
             {
@@ -31,25 +41,26 @@ namespace NetMQ_test_project
 
             this.Port = port;
             this.Address = String.Format("tcp://{0}:{1}", Ip,  Port);
-                
+            this._topics = topics;
+            this._recievedArray = new string[topics.Length];
                 
         }
 
 
-        public string[] ListenForMessages(string[] indicatorIds)
+        public void ListenForMessages()
         {
-            bool Listening = true;
-            var output = new string[indicatorIds.Length];
+            _listening = true;
+            
 
             // NetMQ open socket connection & subscribe
             var subscriber = new SubscriberSocket();
             subscriber.Connect(this.Address);
             Console.WriteLine("Connecting to: " + this.Address);
 
-            foreach (string indicator in indicatorIds) 
+            foreach (string topic in _topics) 
             { 
-                subscriber.Subscribe(indicator);
-                Console.WriteLine("Subscribing to: " + indicator);
+                subscriber.Subscribe(topic);
+                Console.WriteLine("Subscribing to: " + topic);
             }
             //subscriber.SubscribeToAnyTopic();
 
@@ -60,13 +71,31 @@ namespace NetMQ_test_project
 
 
 
-            for (int i = 0; i < indicatorIds.Length; i++)
+            while (_listening)
             {
-                output[i] = subscriber.ReceiveFrameString();
+                if (subscriber.HasIn)
+                {
+                    _recievedSb.Append(subscriber.ReceiveFrameString()+" ");
+                    _recievedList.Add(subscriber.ReceiveFrameString());
+                }
+                
+                
             }
+         
+        }
 
+        public void PrintRecieved()
+        {
+            while (true)
+            {
+                //Console.WriteLine(_recieved);
 
-            return output;
+            }
+        }
+
+        public void StopListening()
+        {
+            _listening = false;
         }
     }
     

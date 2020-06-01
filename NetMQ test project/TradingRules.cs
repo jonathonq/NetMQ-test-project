@@ -9,7 +9,7 @@ using System.Net.Http.Headers;
 
 namespace NetMQ_test_project
 {
-    public enum RulesInputType
+    public enum TriggerType
     {
         Absolute,
         Deviation
@@ -20,12 +20,14 @@ namespace NetMQ_test_project
         public string IndicatorID { get; set; }
         public double _consensus;
 
-        RulesInputType RulesInputType;
+        TriggerType RulesInputType;
 
-        private string _buyOperator;
-        private string _sellOperator;
-        private Operator _buyOperator1;
-        private Operator _sellOperator1;
+        private string _buyOperatorStr;
+        private string _sellOperatorStr;
+        private Operator _buyOperator;
+        private Operator _sellOperator;
+        private Func<double, bool> _buySignal;
+        private Func<double, bool> _sellSignal;
 
 
         private double _buyDevTrigger;
@@ -37,19 +39,19 @@ namespace NetMQ_test_project
 
         private string _displayRules;
 
-        public TradingRules(string id, RulesInputType type, double cons, string buyOper, double buyTrigger, string sellOper, double sellTrigger)
+        public TradingRules(string id, TriggerType type, double cons, string buyOper, double buyTrigger, string sellOper, double sellTrigger)
         {
             this.IndicatorID = id;
             this.RulesInputType = type;
 
             this._consensus = cons;
-            this._buyOperator = buyOper;
-            this._sellOperator = sellOper;
-            //this._buyOperator1 = ParseStringToOperator(buyOper);
-           // this._sellOperator1 = ParseStringToOperator(sellOper);
+            this._buyOperatorStr = buyOper;
+            this._sellOperatorStr = sellOper;
+            this._buyOperator = ParseStringToOperator(buyOper);
+            this._sellOperator = ParseStringToOperator(sellOper);
 
 
-            if (this.RulesInputType == RulesInputType.Absolute)
+            if (this.RulesInputType == TriggerType.Absolute)
             {
                 //if rule is based on absolute figure then assign directly to AbsTriggers
                 //and calculate what deviation would be so it can be displayed later 
@@ -58,7 +60,7 @@ namespace NetMQ_test_project
                 this._sellAbsTrigger = sellTrigger;
                 this._sellDevTrigger = sellTrigger - cons;
             }
-            else if (this.RulesInputType == RulesInputType.Deviation)
+            else if (this.RulesInputType == TriggerType.Deviation)
             {
                 //if rule is based on a deviation figure then do the opposite
                 //better to calculate this now than when generating a signal
@@ -69,9 +71,12 @@ namespace NetMQ_test_project
                 this._sellAbsTrigger = cons + buyTrigger;
             }
 
+            this._buySignal = getFuncFromOperatorAndTrigger(_buyOperator,_buyAbsTrigger);
+            this._sellSignal = getFuncFromOperatorAndTrigger(_sellOperator, _sellAbsTrigger);
 
 
-            this._displayRules = String.Format("ID: {0}, If Dev {1} {2}, BUY. If Dev {3} {4}, SELL",IndicatorID,_buyOperator,_buyDevTrigger,_sellOperator,_sellDevTrigger);
+
+            this._displayRules = String.Format("ID: {0}, If Dev {1} {2}, BUY. If Dev {3} {4}, SELL",IndicatorID,_buyOperatorStr,_buyDevTrigger,_sellOperatorStr,_sellDevTrigger);
         }
 
 
@@ -116,12 +121,12 @@ namespace NetMQ_test_project
 
         public void SetBuyTrigger(string oprtr, double dev)
         {
-            this._buyOperator = oprtr;
+            this._buyOperatorStr = oprtr;
             this._buyDevTrigger = dev;
         }
         public void SetSellTrigger(string oprtr, double dev)
         {
-            this._sellOperator = oprtr;
+            this._sellOperatorStr = oprtr;
             this._sellDevTrigger = dev;
         }
 
@@ -132,99 +137,100 @@ namespace NetMQ_test_project
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Signal GenerateSignal(double data)
         {
-            
-            switch (_buyOperator1)
+
+            if (_buySignal(data))
             {
-                case Operator.GreaterThan:
-                    if (data > _buyAbsTrigger)
-                    {
-                        return Signal.Buy;
-                    }
-                    break;
-                case Operator.LessThan:
-                    if (data < _buyAbsTrigger)
-                    {
-                        return Signal.Buy;
-                    }
-                    break;
-                case Operator.GreaterOrEqualTo:
-                    if (data >= _buyAbsTrigger)
-                    {
-                        return Signal.Buy;
-                    }
-                    break;
-                case Operator.LessOrEqualTo:
-                    if (data <= _buyAbsTrigger)
-                    {
-                        return Signal.Buy;
-                    }
-                    break;
-                case Operator.Equals:
-                    if (data == _buyAbsTrigger)
-                    {
-                        return Signal.Buy;
-                    }
-                    break;
-                default:
-                    //return Signal.No_Trade;
-                    break;
-            }
-            switch (_sellOperator1)
-            {
-                case Operator.GreaterThan:
-                    if (data > _sellAbsTrigger)
-                    {
-                        return Signal.Sell;
-                    }
-                    break;
-                case Operator.LessThan:
-                    if (data < _sellAbsTrigger)
-                    {
-                        return Signal.Sell;
-                    }
-                    break;
-                case Operator.GreaterOrEqualTo:
-                    if (data >= _sellAbsTrigger)
-                    {
-                        return Signal.Sell;
-                    }
-                    break;
-                case Operator.LessOrEqualTo:
-                    if (data <= _sellAbsTrigger)
-                    {
-                        return Signal.Sell;
-                    }
-                    break;
-                case Operator.Equals:
-                    if (data == _sellAbsTrigger)
-                    {
-                        return Signal.Sell;
-                    }
-                    break;
-                default:
-                    break;
-            }
-
-            return Signal.No_Trade;
-
-
-           /* 
-            //Checks if data matches buy absolute trigger (regardless of how it was inputted as)
-            if (ParseStringToOperator(_buyOperator, data, _buyAbsTrigger))
-            {
-
                 return Signal.Buy;
-                //return String.Format("buy (Deviation: {0} is: {1} Trigger: {2})",dev, _buyOperator,_buyTrigger);
             }
-            else if (ParseStringToOperator(_sellOperator, data, _sellAbsTrigger))
+            else if (_sellSignal(data))
             {
                 return Signal.Sell;
-                //return String.Format("sell (Deviation: {0} is: {1} Trigger: {2})", dev, _sellOperator, _sellTrigger);
             }
             else
             {
                 return Signal.No_Trade;
-            }*/
+            }
+
+
+        }
+
+        private Func<double,bool> getFuncFromOperatorAndTrigger(Operator @operator, double trigger)
+        {
+            Func<double, bool> f = x => false;
+            switch (@operator)
+            {
+                case Operator.GreaterThan:
+                    f = data =>
+                    {
+                        if (data > trigger)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    };
+                    return f;
+
+                case Operator.LessThan:
+                    f = data =>
+                    {
+                        if (data < trigger)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    };
+                    return f;
+                case Operator.GreaterOrEqualTo:
+                    f = data =>
+                    {
+                        if (data >= trigger)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    };
+                    return f;
+                case Operator.LessOrEqualTo:
+                    f = data =>
+                    {
+                        if (data <= trigger)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    };
+                    return f;
+                case Operator.Equals:
+                    f = data =>
+                    {
+                        if (data == trigger)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    };
+                    return f;
+                default:
+                    break;
+            }
+            //TODO: Throw exception here. (Figure out correct syntax)
+            Console.WriteLine("getFuncFromOperatorAndTrigger: Error. Signal will always return false");
+            return f;
 
         }
 
@@ -233,7 +239,7 @@ namespace NetMQ_test_project
         public string DisplayRules()
         {
             return String.Format("Trading Rules:\n" +
-                "If Data {0} {1} (Deviation {2}{3}), BUY\nIf Data {4} {5} (Deviation {6}{7}), Sell\n", _buyOperator, _buyAbsTrigger, _buyOperator, _buyDevTrigger, _sellOperator, _sellAbsTrigger, _sellOperator, _sellDevTrigger);
+                "If Data {0} {1} (Deviation {2}{3}), BUY\nIf Data {4} {5} (Deviation {6}{7}), Sell\n", _buyOperatorStr, _buyAbsTrigger, _buyOperatorStr, _buyDevTrigger, _sellOperatorStr, _sellAbsTrigger, _sellOperatorStr, _sellDevTrigger);
         }
 
         public static TradingRules DefineByInput(Indicator indicator)
@@ -295,7 +301,7 @@ namespace NetMQ_test_project
 
 
 
-            return new TradingRules(indicator.GetId(), RulesInputType.Deviation, cons,buyOp,buyDev,sellOp,sellDev);
+            return new TradingRules(indicator.GetId(), TriggerType.Deviation, cons,buyOp,buyDev,sellOp,sellDev);
         }
 
     }

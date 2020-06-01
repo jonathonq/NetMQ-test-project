@@ -1,20 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
+using System.Text;
 
 namespace NetMQ_test_project
 {
-    public class ReadySteadyGo
-    {
-        public ReadySteadyGo(string[] indicators)
-        {
-
-        }
-    }
-    public class CommandEngine
-    {
-    }
-
     internal static partial class Program
     {
         private static void Main()
@@ -32,76 +23,154 @@ namespace NetMQ_test_project
  v0.1 (Alpha)
 
 "; // ascii art
+
+            #region Set Indicators 
             Console.WriteLine(title);
 
-            //AutoClicker.SetBuyPos();
-            //AutoClicker.SetSellPos();
-            // AutoClicker.Test();
-            // Create instance of Connection passing values server, port, Id
-            var connection = new Connection("testserver", "44031");
 
-            List<string> UserDefinedIndicators = new List<string> // Which topics/indicator IDs to listen for
+            List<string> UserDefinedIndicatorIds = new List<string> // Which ZMQ topics ie. indicator IDs to listen for
             {
-                "30000"
+                "30000",
+                "30001"
             };
             Console.WriteLine("Inputted Indicators are: ");
-            foreach (string id in UserDefinedIndicators)
+            foreach (string id in UserDefinedIndicatorIds)
             {
                 Console.WriteLine(id);
             }
 
             // Creates array of indicator objects based on user inputted IDs
-            var indicators = new Indicator[UserDefinedIndicators.Count];
-            foreach (var id in UserDefinedIndicators)
+            // Not even sure if having a class/objects for indicator is necessary, could hinder performance
+            var indicators = new Indicator[UserDefinedIndicatorIds.Count];
+
+            // Convert ID List into Array for better performance?
+            var IndicatorIds = UserDefinedIndicatorIds.ToArray();
+
+            #endregion
+
+            #region Define Trading Rules for every indicator
+            foreach (var id in UserDefinedIndicatorIds)
             {
-                indicators[UserDefinedIndicators.IndexOf(id)] = new Indicator(id);
-                Console.WriteLine("Define Rules for: {0}?  (y/n)", id);
+                indicators[UserDefinedIndicatorIds.IndexOf(id)] = new Indicator(id);
+                
+            }
+            foreach (var indicator in indicators)
+            {
+                Console.WriteLine("Define Rules for: {0}?  (y/n)", indicator.Id);
                 switch (Console.ReadLine().ToLower())
                 {
                     case "yes":
                     case "y":
-                        indicators[UserDefinedIndicators.IndexOf(id)].TradingRules = TradingRules.DefineByInput(indicators[UserDefinedIndicators.IndexOf(id)]);
+                        indicator.TradingRules = TradingRules.DefineByInput(indicator);
                         break;
 
                     case "no":
                     case "n":
-                        foreach (var indicator in indicators)
-                        {
-                            indicator.TradingRules = new TradingRules(id, RulesInputType.Deviation, 1, "<", 10, ">", 10);
-                        }
+                        Console.WriteLine("Using default (hardcoded)");
+                        indicator.TradingRules = new TradingRules(indicator.Id, TriggerType.Deviation, 1, "<", 10, ">", 10);
                         break;
 
                     default:
-                        Console.WriteLine("Invalid input. No Rules set for {0}", id);
+                        Console.WriteLine("Invalid input. No Rules set for {0}", indicator.Id);
                         break;
                 }
-                Console.WriteLine(indicators[UserDefinedIndicators.IndexOf(id)].TradingRules.DisplayRules());
+                Console.WriteLine(indicator.TradingRules.DisplayRules());
             }
-
+            
+            
+            
             List<TradingRules> AllTradingRules = new List<TradingRules>();
+            #endregion
 
-            foreach (var id in UserDefinedIndicators)
-            {
-                AllTradingRules.Add(new TradingRules(id, RulesInputType.Deviation, 1, ">", 10, "<", 10));
 
-                //Console.WriteLine(AllTradingRules[UserDefinedIndicators.IndexOf(id)].DisplayRules());
-            }//possibly delete if not needed
-
-            //var autoClicker = new AutoClicker();
-
+            #region Set Autoclicker Buy and Sell Locations
             AutoClicker.SetBuyPos();
             AutoClicker.SetSellPos();
-            var indiArray = new string[UserDefinedIndicators.Count];
-            for (int i = 0; i < indiArray.Length; i++)
-            {
-                indiArray[i] = UserDefinedIndicators[i];
-            }
+            #endregion
 
-            //List<string> Messages = connection.ListenForMessages(UserDefinedIndicators);
-            string[] Messages = connection.ListenForMessages(indiArray);
+
+
+
+
+            var connection = new Connection("testserver", "44031", IndicatorIds);
+
+
+            // Create thread to listen for messages seperate from trade execution thread
+            var ListenerThread = new Thread(connection.ListenForMessages) { Name="ListenerThread" };
+            ListenerThread.Start();
+            //var testThread = new Thread(connection.PrintRecieved) { Name = "testThread" };
 
             var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            AutoClicker.ClickBuy();
+            stopWatch.Stop();
 
+            
+            var blah = "";
+
+            stopWatch.Reset();
+
+            while (true)
+            {
+                var msg = connection._recievedSb.ToString();
+
+                if (msg.Length>0)
+                {
+                    stopWatch.Start();
+                    for (int i = 0; i < indicators.Length; i++)
+                    {
+                        if (msg.Substring(0, 5) == indicators[i].Id)
+                        {
+                            
+                            //var signal = indicators[i].TradingRules.GenerateSignal(double.Parse(msg.Substring(6)));
+                            switch (indicators[i].TradingRules.GenerateSignal(double.Parse(msg.Substring(6))))
+                            {
+                                case Signal.Sell:
+                                    //AutoClicker.ClickSell();
+                                    Console.WriteLine("Sell signal");
+                                    break;
+
+                                case Signal.Buy:
+                                    //AutoClicker.ClickBuy();
+                                    Console.WriteLine("Buy signal");
+                                    break;
+
+                                default:
+                                    Console.WriteLine("No Signal");
+                                    break;
+                            }
+                            stopWatch.Stop();
+                            Console.WriteLine($"Contains {IndicatorIds[i]}");
+                        }
+                    }
+                    
+                }
+
+                
+
+                #region List version
+                /*
+                if (connection._recievedList.Count >0)
+                {
+                    //var str = connection._recieved.ToString();
+                    stopWatch.Start();
+                    for (int i = 0; i < IndicatorIds.Length; i++)
+                    {
+                        if (connection._recievedList[i].Contains(IndicatorIds[i]))
+                        {
+                            Console.WriteLine(IndicatorIds[i]);
+                        }
+                    }
+
+                    stopWatch.Stop();
+                    
+                    break;
+                }*/
+                #endregion
+                //break;
+            }
+            connection.StopListening();
+            /*
             foreach (string message in Messages)
             {
                 Message currentMessage = new Message(message);
@@ -143,7 +212,7 @@ namespace NetMQ_test_project
                         Console.WriteLine("RunTime: " + elapsedTime);
                     }
                 }
-            }
+            }*/
         }
     }
 }

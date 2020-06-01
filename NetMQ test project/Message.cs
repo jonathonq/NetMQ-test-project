@@ -17,7 +17,7 @@ namespace NetMQ_test_project
         {
             return _id;
         }
-        public double GetData()
+        public  double GetData(string msg)
         {
             return _data;
         }

@@ -28,6 +28,8 @@ namespace NetMQ_test_project
         private static POINT _buyPos;
         private static POINT _sellPos;
 
+        public bool Executed = false;
+
         private static POINT SetPos()
         {
             Console.WriteLine("Move cursor to desired position and press the S key to set. (Don't minimize this window)");
@@ -66,16 +68,26 @@ namespace NetMQ_test_project
 
 
         }
-        private static void Click()
+        public static void Click()
         {
             mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
             mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ClickBuy()
         {
+            var sw = new Stopwatch();
+            sw.Start();
             SetCursorPos(_buyPos.X, _buyPos.Y);
-            Click();
+            sw.Stop();
+            sw.Reset();
+            sw.Start();
+            mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            sw.Stop();
+            sw.Reset();
+            //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            //Click(); changed to be in-line to improve performance. Less elegant but whatever
+            
             //Console.WriteLine("Buy Pos: {0},{1}", _buyPos.X, _buyPos.Y);
 
         }
