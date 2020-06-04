@@ -14,19 +14,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" line="13" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" bodystart="13" bodyend="155"/>
-        <references refid="class_net_m_q__test__project_1_1_message_1a960b02b7eaf8968782a715bb49479311" compoundref="_message_8cs" startline="9">NetMQ_test_project.Message._data</references>
-        <references refid="class_net_m_q__test__project_1_1_message_1aebefad4089126df272171069284d2d7f" compoundref="_message_8cs" startline="8">NetMQ_test_project.Message._id</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="146" endline="206">NetMQ_test_project.TradingRules.DefineByInput</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" compoundref="_trading_rules_8cs" startline="140" endline="144">NetMQ_test_project.TradingRules.DisplayRules</references>
-        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" compoundref="_trading_rules_8cs" startline="115" endline="136">NetMQ_test_project.TradingRules.GenerateSignal</references>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" line="11" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" bodystart="11" bodyend="217"/>
+        <references refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" compoundref="_trading_rules_8cs" startline="138" endline="155">NetMQ_test_project.TradingRules.GenerateSignal</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" line="11" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" bodystart="10" bodyend="156"/>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" line="10" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Program.cs" bodystart="9" bodyend="218"/>
     <listofallmembers>
       <member refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Program</scope><name>Main</name></member>
     </listofallmembers>

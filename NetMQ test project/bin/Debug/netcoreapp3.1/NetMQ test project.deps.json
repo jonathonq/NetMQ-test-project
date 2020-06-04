@@ -8,10 +8,30 @@
     ".NETCoreApp,Version=v3.1": {
       "NetMQ test project/1.0.0": {
         "dependencies": {
+          "AdvancedDLSupport": "3.2.0",
+          "Microsoft.TestApi": "0.6.0",
           "NetMQ": "4.0.0.207"
         },
         "runtime": {
           "NetMQ test project.dll": {}
+        }
+      },
+      "AdvancedDLSupport/3.2.0": {
+        "dependencies": {
+          "Humanizer.Core": "2.5.16",
+          "Mono.DllMap": "1.0.1",
+          "StrictEmit": "2.4.2",
+          "System.Memory": "4.5.2",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.ValueTuple": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AdvancedDLSupport.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
         }
       },
       "AsyncIO/0.1.69": {
@@ -22,7 +42,40 @@
           }
         }
       },
+      "Humanizer.Core/2.5.16": {
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.16.1900"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.4.1": {},
       "Microsoft.NETCore.Platforms/2.0.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.TestApi/0.6.0": {
+        "runtime": {
+          "lib/net40/TestApiCore.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/net40/TestApiWpf.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Mono.DllMap/1.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mono.DllMap.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
       "NetMQ/4.0.0.207": {
         "dependencies": {
           "AsyncIO": "0.1.69",
@@ -35,6 +88,27 @@
           }
         }
       },
+      "StrictEmit/2.4.2": {
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/StrictEmit.dll": {
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
+          }
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Memory/4.5.2": {},
       "System.Net.Http.WinHttpHandler/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.Net.Http.WinHttpHandler.dll": {
@@ -73,7 +147,46 @@
           }
         }
       },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Reflection.DispatchProxy/4.4.0": {},
+      "System.Reflection.Emit/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Emit.ILGeneration/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
       "System.Security.Principal.Windows/4.4.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0"
@@ -89,7 +202,22 @@
             "fileVersion": "4.6.25525.6"
           }
         }
-      }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.ValueTuple/4.4.0": {}
     }
   },
   "libraries": {
@@ -98,12 +226,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AdvancedDLSupport/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bFOPn/LE5yeGmTzRcU47jYQmHsi7G/MJtc/N4CTgqzoCoaXpjGQC4yrNbDXzJ5XaZFRdO/8ZXDiJFWMUO6MWfg==",
+      "path": "advanceddlsupport/3.2.0",
+      "hashPath": "advanceddlsupport.3.2.0.nupkg.sha512"
+    },
     "AsyncIO/0.1.69": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xyXJLi+wjy6AtIyWXHXJkPS0gItqVT4lg5w++7bA5YEjugYKdrFMGxCo6KUJ1yYwjriLQJ1g35LDljZs3Q90XQ==",
       "path": "asyncio/0.1.69",
       "hashPath": "asyncio.0.1.69.nupkg.sha512"
+    },
+    "Humanizer.Core/2.5.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-myG+XxKOOXyb+CAXWh6A0Le/gt8cBkS/o+f+CQ69/G9ufXdgz1rKFdtJlsdiypRq4TUKesEafeF+XimkDiPW3w==",
+      "path": "humanizer.core/2.5.16",
+      "hashPath": "humanizer.core.2.5.16.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A5hI3gk6WpcBI0QGZY6/d5CCaYUxJgi7iENn1uYEng+Olo8RfI5ReGVkjXjeu3VR3srLvVYREATXa2M0X7FYJA==",
+      "path": "microsoft.csharp/4.4.1",
+      "hashPath": "microsoft.csharp.4.4.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "type": "package",
@@ -112,12 +261,54 @@
       "path": "microsoft.netcore.platforms/2.0.0",
       "hashPath": "microsoft.netcore.platforms.2.0.0.nupkg.sha512"
     },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.TestApi/0.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bvbJVGx0dg7tJ7/W6kdvI6T4qgk19zU3Jo7o9/1Ha3hYbpuG7ErTQAtlas1CipX/C539YXoWCgrUbbJcokI6YA==",
+      "path": "microsoft.testapi/0.6.0",
+      "hashPath": "microsoft.testapi.0.6.0.nupkg.sha512"
+    },
+    "Mono.DllMap/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q93dQrQEGDcTGwCTCOaSUww9gF1N39l8Rym78gbo3xsATT0heh9LvKQMULZsakNq5zzFRnFLxK1zs3eMRwqoEQ==",
+      "path": "mono.dllmap/1.0.1",
+      "hashPath": "mono.dllmap.1.0.1.nupkg.sha512"
+    },
     "NetMQ/4.0.0.207": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-1nBr9QdWiQLpa0y8f7jxdGj2VueWVE5yMIgbt23EaKjJu47SsLrU79iImIVbJjs23zPu+iuAWZsNKVx82XVG2Q==",
       "path": "netmq/4.0.0.207",
       "hashPath": "netmq.4.0.0.207.nupkg.sha512"
+    },
+    "StrictEmit/2.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mhpwz2qs4FEv33n/q3BvOGPuFdeGPy6iYGXOjGnkEZ11HE0OIYzbzmKvGYlwA3sTyXk1C6eQEFo0jbJAQHXmgg==",
+      "path": "strictemit/2.4.2",
+      "hashPath": "strictemit.2.4.2.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
+      "path": "system.memory/4.5.2",
+      "hashPath": "system.memory.4.5.2.nupkg.sha512"
     },
     "System.Net.Http.WinHttpHandler/4.4.0": {
       "type": "package",
@@ -133,12 +324,54 @@
       "path": "system.private.servicemodel/4.4.0",
       "hashPath": "system.private.servicemodel.4.4.0.nupkg.sha512"
     },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
     "System.Reflection.DispatchProxy/4.4.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xK6JE0mpsBD+T0qu3V6dmVRa06PxAvIIM/zSjouqP7Sk6X+FQj+9XFRz9GmZk9aJGMU1LX6AgTZIlsYZ64QKsw==",
       "path": "system.reflection.dispatchproxy/4.4.0",
       "hashPath": "system.reflection.dispatchproxy.4.4.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
+      "path": "system.reflection.emit/4.3.0",
+      "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.ILGeneration/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
+      "path": "system.reflection.emit.ilgeneration/4.3.0",
+      "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
     "System.Security.Principal.Windows/4.4.0": {
       "type": "package",
@@ -153,6 +386,27 @@
       "sha512": "sha512-6rATyMUeeOPVY7XzoneoyzGKVCc62gGl/A6SKrlY0dX0bnMprIrXZF1AXy9Y8ne49JU/2RGGeldFbATYONc/XQ==",
       "path": "system.servicemodel.primitives/4.4.0",
       "hashPath": "system.servicemodel.primitives.4.4.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+      "path": "system.valuetuple/4.4.0",
+      "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
     }
   }
 }

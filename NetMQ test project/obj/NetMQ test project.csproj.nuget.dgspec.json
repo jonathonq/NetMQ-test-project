@@ -38,6 +38,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AdvancedDLSupport": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Microsoft.TestApi": {
+              "target": "Package",
+              "version": "[0.6.0, )"
+            },
             "NetMQ": {
               "target": "Package",
               "version": "[4.0.0.207, )"

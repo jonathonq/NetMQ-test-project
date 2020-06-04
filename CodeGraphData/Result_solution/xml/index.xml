@@ -3,16 +3,17 @@
   <compound refid="class_net_m_q__test__project_1_1_auto_clicker" kind="class"><name>NetMQ_test_project::AutoClicker</name>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a8d0dbf24fe6ddb387089cdc0ce4f4c3a" kind="variable"><name>MOUSEEVENTF_LEFTDOWN</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1af2aebac5e94ed5ef01c7191cf08158f0" kind="variable"><name>MOUSEEVENTF_LEFTUP</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1acddfeb93f72730e58572e3b550c5e047" kind="variable"><name>Executed</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1afc0d0ce66ba9f652b83d9390d8ec5a68" kind="variable"><name>_buyPos</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1aed93c11256cdbec1a78a94efc44d8c27" kind="variable"><name>_sellPos</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a85a337bca7a28342096288d77f10d22c" kind="function"><name>GetCursorPos</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1adbe197665414dcce1cda5744cadaca9c" kind="function"><name>SetCursorPos</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a1be4a7dc3960b2f9242abde6f8eadc5a" kind="function"><name>mouse_event</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a8e680b0030adeb31405dfd73e3bec73a" kind="function"><name>SetPos</name></member>
-    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" kind="function"><name>Click</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a84bdb840ece749ca6314378675008051" kind="function"><name>SetBuyPos</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a2b997b35cecfc609c6a373e9b03511f8" kind="function"><name>SetSellPos</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a5f1ccb801a11f933dc7b2bbf16947c19" kind="function"><name>ShowPositions</name></member>
+    <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a77b014d4af8c63efec3777cd55d9efc4" kind="function"><name>Click</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a3c8385246a67d538d2bcc3ddb339634c" kind="function"><name>ClickBuy</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1a4ebccaa40172496de44fc29356503fec" kind="function"><name>ClickSell</name></member>
     <member refid="class_net_m_q__test__project_1_1_auto_clicker_1acb94d9c2f7b707cda941137629570869" kind="function"><name>Test</name></member>
@@ -22,9 +23,18 @@
   <compound refid="class_net_m_q__test__project_1_1_connection" kind="class"><name>NetMQ_test_project::Connection</name>
     <member refid="class_net_m_q__test__project_1_1_connection_1a58da48dda48d0a59bc323d1f6d86175c" kind="variable"><name>Ip</name></member>
     <member refid="class_net_m_q__test__project_1_1_connection_1a85d581811a209f8d9373b280bfb064d8" kind="variable"><name>Port</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1aedcb0d31f6d356956409edc4c4ba9eed" kind="variable"><name>_listening</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a8180e66cc845f9f9095d143e14db5bcd" kind="variable"><name>_topics</name></member>
     <member refid="class_net_m_q__test__project_1_1_connection_1a44a4418c29f92adaa14043dad824db42" kind="variable"><name>Address</name></member>
-    <member refid="class_net_m_q__test__project_1_1_connection_1a7d0e73833f1dc4df5fe7bb4d5debf64c" kind="function"><name>Connection</name></member>
-    <member refid="class_net_m_q__test__project_1_1_connection_1afb0ac42dcf21f8c72749025209c79bcc" kind="function"><name>ListenForMessages</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a222e6cd2fc06a52007b3b70443b64a5a" kind="variable"><name>_lastRecieved</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1ab5c038b0da84fc661bbd50d11d7a952d" kind="variable"><name>_recievedSb</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a14e914bfc1465457e04cacd1d21c35e7" kind="variable"><name>_recievedList</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1ab1840805beefec38ecefb6f0b4c6229c" kind="variable"><name>_recievedArray</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1ad118f26d44e2291027da69ab847f49ee" kind="variable"><name>_recievedCount</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a7a1a32500e927e12e23ecb59be8ddea9" kind="function"><name>Connection</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a4c2949279803816b0892269a7d07b839" kind="function"><name>ListenForMessages</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1af6d54629eb9d7d86015711ede0013667" kind="function"><name>PrintRecieved</name></member>
+    <member refid="class_net_m_q__test__project_1_1_connection_1a543058c6157edf5d8deb99deaa2ef7be" kind="function"><name>StopListening</name></member>
   </compound>
   <compound refid="class_net_m_q__test__project_1_1_indicator" kind="class"><name>NetMQ_test_project::Indicator</name>
     <member refid="class_net_m_q__test__project_1_1_indicator_1a242eeca6c504f5f2d2d5a4141af1fe5d" kind="variable"><name>Id</name></member>
@@ -44,7 +54,7 @@
     <member refid="class_net_m_q__test__project_1_1_message_1a960b02b7eaf8968782a715bb49479311" kind="variable"><name>_data</name></member>
     <member refid="class_net_m_q__test__project_1_1_message_1ae3f65be0f42e599d5490548f38b67bf4" kind="function"><name>Message</name></member>
     <member refid="class_net_m_q__test__project_1_1_message_1a2fa8016fb74f072f23e6c9c74b9c5818" kind="function"><name>GetID</name></member>
-    <member refid="class_net_m_q__test__project_1_1_message_1aa8fe617298455efaf326f35de246ff49" kind="function"><name>GetData</name></member>
+    <member refid="class_net_m_q__test__project_1_1_message_1ab9a09593a645a46d2fe5d628632df11c" kind="function"><name>GetData</name></member>
     <member refid="class_net_m_q__test__project_1_1_message_1a29fb133dcc9c35a627245d8d372250ca" kind="function"><name>GetOriginalString</name></member>
   </compound>
   <compound refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" kind="struct"><name>NetMQ_test_project::POINT</name>
@@ -54,26 +64,45 @@
   <compound refid="class_net_m_q__test__project_1_1_program" kind="class"><name>NetMQ_test_project::Program</name>
     <member refid="class_net_m_q__test__project_1_1_program_1a3748b882966f3db85c54f57936e8a487" kind="function"><name>Main</name></member>
   </compound>
+  <compound refid="class_net_m_q__test__project_1_1_trade" kind="class"><name>NetMQ_test_project::Trade</name>
+    <member refid="class_net_m_q__test__project_1_1_trade_1a79f73fa2395627edf87b34f34592b340" kind="variable"><name>_connection</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trade_1ab3d1fe3af8169b52eaf795a5853666ed" kind="variable"><name>_indicators</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trade_1acf3ffcb3ce38042e0d99b9365c6ca3c0" kind="function"><name>Trade</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trade_1ac7081d28db68d8a5693eadf280ae98bc" kind="function"><name>Start</name></member>
+  </compound>
   <compound refid="class_net_m_q__test__project_1_1_trading_rules" kind="class"><name>NetMQ_test_project::TradingRules</name>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa17e7836a269f05a0e83633660854876" kind="enum"><name>Operator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa17e7836a269f05a0e83633660854876af6d044fe1f01fb0c956b80099e2a3072" kind="enumvalue"><name>GreaterThan</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa17e7836a269f05a0e83633660854876ac6d9d7bb9939f62f01c80f8b1251501c" kind="enumvalue"><name>LessThan</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa17e7836a269f05a0e83633660854876a1d1cb813d7aec2b3b5f6e1493cf17368" kind="enumvalue"><name>GreaterOrEqualTo</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa17e7836a269f05a0e83633660854876af7dbbbc06bed9718340d0c6612bfcb90" kind="enumvalue"><name>LessOrEqualTo</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa17e7836a269f05a0e83633660854876a0ccb67e7eaae09d9e4078d161eeca100" kind="enumvalue"><name>Equals</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa4b462776ecb1c0395e0464468c15ff5" kind="property"><name>IndicatorID</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec68fc1583e4a0d3cacbd5474ec9be47" kind="variable"><name>_consensus</name></member>
-    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a57526af5d6ab0f5b7a89333729ea385e" kind="variable"><name>RulesInputType</name></member>
-    <member refid="class_net_m_q__test__project_1_1_trading_rules_1ab013759dd3225926d32cacfdd5b15d8e" kind="variable"><name>_buyOperator</name></member>
-    <member refid="class_net_m_q__test__project_1_1_trading_rules_1ad9c17daf6820e35292f0b53c1f83f954" kind="variable"><name>_sellOperator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a3b5b12ac363b8a189d0b52048fce1901" kind="variable"><name>RulesInputType</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a2c5095b40c3a773cceb5c6072b65ca1d" kind="variable"><name>_buyOperatorStr</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a89139425407eff5d024fda3840cd11ea" kind="variable"><name>_sellOperatorStr</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a1a7c6ad414d6f5a8ece77dadf2a21c2c" kind="variable"><name>_buyOperator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a461d038debd1a2ed36d09b5572902427" kind="variable"><name>_sellOperator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1acb0569026ef4abd4da518a46529145f5" kind="variable"><name>_buySignal</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a33d15aa017aa579644d0bc7fd76894c3" kind="variable"><name>_sellSignal</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1a39addaded1e96c8de97a8333376eb0e7" kind="variable"><name>_buyDevTrigger</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec3ec0fa4550bc4475d1f0fc9ba777bf" kind="variable"><name>_buyAbsTrigger</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1a7aa11f78412997afdc2e8a8f2d6069df" kind="variable"><name>_sellDevTrigger</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa74af292ab5c7914da1b02282ef428ce" kind="variable"><name>_sellAbsTrigger</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1a3968107c4e531e764a13d40bbf6e21f1" kind="variable"><name>_displayRules</name></member>
-    <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa3fb4f5b84c4f94736a0c4c0ff8621cf" kind="function"><name>TradingRules</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1abf621792956dccf41c4ebf9bc0e477a8" kind="function"><name>TradingRules</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1a4856a1774fe7c91f3bccaf9ec8ff4a5f" kind="function"><name>SetBuyTrigger</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1a294011c3a9b9988b9a92f6aadafe52b3" kind="function"><name>SetSellTrigger</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1aa921cf57d7c46b70b90513350f9c785a" kind="function"><name>GenerateSignal</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1a9c0e491b4b676f461595e734ccc83ad1" kind="function"><name>DisplayRules</name></member>
-    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a19ae8abef4a9958dcb3bc867eb63f59b" kind="function"><name>Operator</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a05399ff7426884883630d7f6a5370b73" kind="function"><name>ParseStringToOperator</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1adb52d786539dbc17607a560da85272e2" kind="function"><name>IsOperator</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1a7977688c380e4f588e548510b6dd56b1" kind="function"><name>GetDeviation</name></member>
     <member refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" kind="function"><name>DefineByInput</name></member>
+    <member refid="class_net_m_q__test__project_1_1_trading_rules_1a193c74bfae742a1e343cc4a2bdd40303" kind="function"><name>getFuncFromOperatorAndTrigger</name></member>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_visual_basic_1_1_compiler_services" kind="namespace"><name>Microsoft::VisualBasic::CompilerServices</name>
   </compound>
   <compound refid="namespace_net_m_q" kind="namespace"><name>NetMQ</name>
   </compound>
@@ -85,9 +114,9 @@
     <member refid="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccca3068c5a98c003498f1fec0c489212e8b" kind="enumvalue"><name>Sell</name></member>
     <member refid="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccca3a754dd3df0dbd9fbb87ccf2b7f632db" kind="enumvalue"><name>No_Trade</name></member>
     <member refid="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedecccaf1d4ac54357cc0932f385d56814ba7e4" kind="enumvalue"><name>Conflict</name></member>
-    <member refid="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881" kind="enum"><name>RulesInputType</name></member>
-    <member refid="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881ab51ca26c6c89cfc9bec338f7a0d3e0c8" kind="enumvalue"><name>Absolute</name></member>
-    <member refid="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881a5701b8b69f5521e8a98bacb8bf75933b" kind="enumvalue"><name>Deviation</name></member>
+    <member refid="namespace_net_m_q__test__project_1af3c3d7985c9abc5cc686b878f2f79211" kind="enum"><name>TriggerType</name></member>
+    <member refid="namespace_net_m_q__test__project_1af3c3d7985c9abc5cc686b878f2f79211ab51ca26c6c89cfc9bec338f7a0d3e0c8" kind="enumvalue"><name>Absolute</name></member>
+    <member refid="namespace_net_m_q__test__project_1af3c3d7985c9abc5cc686b878f2f79211a5701b8b69f5521e8a98bacb8bf75933b" kind="enumvalue"><name>Deviation</name></member>
   </compound>
   <compound refid="namespace_system" kind="namespace"><name>System</name>
   </compound>
@@ -99,7 +128,7 @@
   </compound>
   <compound refid="namespace_system_1_1_drawing" kind="namespace"><name>System::Drawing</name>
   </compound>
-  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  <compound refid="namespace_system_1_1_net_1_1_http_1_1_headers" kind="namespace"><name>System::Net::Http::Headers</name>
   </compound>
   <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
   </compound>
@@ -109,11 +138,15 @@
   </compound>
   <compound refid="namespace_system_1_1_runtime_1_1_interop_services_1_1_windows_runtime" kind="namespace"><name>System::Runtime::InteropServices::WindowsRuntime</name>
   </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
   <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
   </compound>
   <compound refid="namespace_system_1_1_windows" kind="namespace"><name>System::Windows</name>
   </compound>
   <compound refid="_autoclicker_8cs" kind="file"><name>Autoclicker.cs</name>
+  </compound>
+  <compound refid="_conflict_manager_8cs" kind="file"><name>ConflictManager.cs</name>
   </compound>
   <compound refid="_connection_8cs" kind="file"><name>Connection.cs</name>
   </compound>
@@ -126,6 +159,8 @@
   <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
   </compound>
   <compound refid="_signal_8cs" kind="file"><name>Signal.cs</name>
+  </compound>
+  <compound refid="_trade_8cs" kind="file"><name>Trade.cs</name>
   </compound>
   <compound refid="_trading_rules_8cs" kind="file"><name>TradingRules.cs</name>
   </compound>

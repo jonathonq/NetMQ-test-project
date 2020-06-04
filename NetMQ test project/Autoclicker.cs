@@ -1,16 +1,48 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Windows;
-using System.Diagnostics;
-using System.Drawing;
-using System.Threading;
 using System.Runtime.CompilerServices;
+using AdvancedDLSupport;
+using System.Diagnostics;
 
 namespace NetMQ_test_project
 {
- 
+    public interface IMath
+    {
+        int TimesUsed { get; }
+
+        int Multiply(int a, int b);
+        int Subtract(int a, int b);
+    }
+    public interface Iuser32
+    {
+        bool GetCursorPos(out POINT lpPoint);
+        bool SetCursorPos(int x, int y);
+        void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
+
+    }
+
+
+
     public class AutoClicker
     {
+        private NativeLibraryBuilder builder = new NativeLibraryBuilder(ImplementationOptions.UseIndirectCalls);
+        private static Iuser32 iuser32;
+
+        public void TestMethod()
+        {
+             builder.ActivateInterface<Iuser32>("user32.dll");
+            
+        }
+
+
+
+
+
+
+
+
+
+
         //invoking DLLs to have access to GetCursorPos, SetCursorPos, mouse_event 
         //from windows API
         //naming conventions are not standard for C#
@@ -70,23 +102,26 @@ namespace NetMQ_test_project
         }
         public static void Click()
         {
+            var sw = new Stopwatch();
+            sw.Start();
             mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            sw.Stop();
         }
         //[MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ClickBuy()
         {
-            var sw = new Stopwatch();
-            sw.Start();
+            //            var sw = new Stopwatch();
+            //            sw.Start();
             SetCursorPos(_buyPos.X, _buyPos.Y);
-            sw.Stop();
-            sw.Reset();
-            sw.Start();
+            //            sw.Stop();
+            //            sw.Reset();
+            //            sw.Start();
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-            sw.Stop();
-            sw.Reset();
-            //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-            //Click(); changed to be in-line to improve performance. Less elegant but whatever
+            //            sw.Stop();
+            //            sw.Reset();
+
+            //           Click(); changed to be in-line to improve performance. Less elegant but whatever
             
             //Console.WriteLine("Buy Pos: {0},{1}", _buyPos.X, _buyPos.Y);
 

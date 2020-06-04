@@ -3,12 +3,14 @@
   <compounddef id="dir_498f3923f61f83043e8b11d584454b2a" kind="dir">
     <compoundname>C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project</compoundname>
     <innerfile refid="_autoclicker_8cs">Autoclicker.cs</innerfile>
+    <innerfile refid="_conflict_manager_8cs">ConflictManager.cs</innerfile>
     <innerfile refid="_connection_8cs">Connection.cs</innerfile>
     <innerfile refid="_indicator_8cs">Indicator.cs</innerfile>
     <innerfile refid="_message_8cs">Message.cs</innerfile>
     <innerfile refid="_p_o_i_n_t_8cs">POINT.cs</innerfile>
     <innerfile refid="_program_8cs">Program.cs</innerfile>
     <innerfile refid="_signal_8cs">Signal.cs</innerfile>
+    <innerfile refid="_trade_8cs">Trade.cs</innerfile>
     <innerfile refid="_trading_rules_8cs">TradingRules.cs</innerfile>
     <briefdescription>
     </briefdescription>

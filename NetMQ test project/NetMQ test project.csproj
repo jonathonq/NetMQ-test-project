@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AdvancedDLSupport" Version="3.2.0" />
+    <PackageReference Include="Microsoft.TestApi" Version="0.6.0" />
     <PackageReference Include="NetMQ" Version="4.0.0.207" />
   </ItemGroup>
 

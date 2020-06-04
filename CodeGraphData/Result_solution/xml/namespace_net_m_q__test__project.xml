@@ -3,12 +3,13 @@
   <compounddef id="namespace_net_m_q__test__project" kind="namespace">
     <compoundname>NetMQ_test_project</compoundname>
     <innerclass refid="class_net_m_q__test__project_1_1_auto_clicker" prot="public">NetMQ_test_project::AutoClicker</innerclass>
+    <innerclass refid="class_net_m_q__test__project_1_1_conflict_manager" prot="public">NetMQ_test_project::ConflictManager</innerclass>
     <innerclass refid="class_net_m_q__test__project_1_1_connection" prot="public">NetMQ_test_project::Connection</innerclass>
     <innerclass refid="class_net_m_q__test__project_1_1_indicator" prot="public">NetMQ_test_project::Indicator</innerclass>
     <innerclass refid="class_net_m_q__test__project_1_1_message" prot="public">NetMQ_test_project::Message</innerclass>
     <innerclass refid="struct_net_m_q__test__project_1_1_p_o_i_n_t" prot="public">NetMQ_test_project::POINT</innerclass>
     <innerclass refid="class_net_m_q__test__project_1_1_program" prot="package">NetMQ_test_project::Program</innerclass>
-    <innerclass refid="class_net_m_q__test__project_1_1_conflict_manager" prot="public">NetMQ_test_project::ConflictManager</innerclass>
+    <innerclass refid="class_net_m_q__test__project_1_1_trade" prot="public">NetMQ_test_project::Trade</innerclass>
     <innerclass refid="class_net_m_q__test__project_1_1_trading_rules" prot="public">NetMQ_test_project::TradingRules</innerclass>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="namespace_net_m_q__test__project_1abd6d56b174ea3d7e4fb99ff0aeedeccc" prot="public" static="no">
@@ -49,16 +50,16 @@
         </inbodydescription>
         <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Signal.cs" line="4" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Signal.cs" bodystart="3" bodyend="9"/>
       </memberdef>
-      <memberdef kind="enum" id="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881" prot="public" static="no">
-        <name>RulesInputType</name>
-        <enumvalue id="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881ab51ca26c6c89cfc9bec338f7a0d3e0c8" prot="public">
+      <memberdef kind="enum" id="namespace_net_m_q__test__project_1af3c3d7985c9abc5cc686b878f2f79211" prot="public" static="no">
+        <name>TriggerType</name>
+        <enumvalue id="namespace_net_m_q__test__project_1af3c3d7985c9abc5cc686b878f2f79211ab51ca26c6c89cfc9bec338f7a0d3e0c8" prot="public">
           <name>Absolute</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="namespace_net_m_q__test__project_1aeaf4b7e739811ac5714a63b2017a5881a5701b8b69f5521e8a98bacb8bf75933b" prot="public">
+        <enumvalue id="namespace_net_m_q__test__project_1af3c3d7985c9abc5cc686b878f2f79211a5701b8b69f5521e8a98bacb8bf75933b" prot="public">
           <name>Deviation</name>
           <briefdescription>
           </briefdescription>
@@ -71,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="14" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="13" bodyend="17"/>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="13" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" bodystart="12" bodyend="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

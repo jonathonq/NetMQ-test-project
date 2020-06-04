@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_net_m_q__test__project_1_1_trade" kind="class" prot="public">
+    <compoundname>NetMQ_test_project::Trade</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trade_1a79f73fa2395627edf87b34f34592b340" prot="private" static="no" mutable="no">
+        <type><ref refid="class_net_m_q__test__project_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection NetMQ_test_project.Trade._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" line="9" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_m_q__test__project_1_1_trade_1ab3d1fe3af8169b52eaf795a5853666ed" prot="private" static="no" mutable="no">
+        <type><ref refid="class_net_m_q__test__project_1_1_indicator" kindref="compound">Indicator</ref>[]</type>
+        <definition>Indicator [] NetMQ_test_project.Trade._indicators</definition>
+        <argsstring></argsstring>
+        <name>_indicators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" line="10" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_trade_1acf3ffcb3ce38042e0d99b9365c6ca3c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetMQ_test_project.Trade.Trade</definition>
+        <argsstring>(Connection connection, Indicator[] indicators)</argsstring>
+        <name>Trade</name>
+        <param>
+          <type><ref refid="class_net_m_q__test__project_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type><ref refid="class_net_m_q__test__project_1_1_indicator" kindref="compound">Indicator</ref>[]</type>
+          <declname>indicators</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" line="12" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_m_q__test__project_1_1_trade_1ac7081d28db68d8a5693eadf280ae98bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetMQ_test_project.Trade.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" line="18" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" bodystart="18" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="20">
+        <label>NetMQ_test_project.TradingRules</label>
+        <link refid="class_net_m_q__test__project_1_1_trading_rules"/>
+      </node>
+      <node id="18">
+        <label>NetMQ_test_project.Connection</label>
+        <link refid="class_net_m_q__test__project_1_1_connection"/>
+      </node>
+      <node id="17">
+        <label>NetMQ_test_project.Trade</label>
+        <link refid="class_net_m_q__test__project_1_1_trade"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>_indicators</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>NetMQ_test_project.Indicator</label>
+        <link refid="class_net_m_q__test__project_1_1_indicator"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>TradingRules</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" line="8" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Trade.cs" bodystart="7" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_net_m_q__test__project_1_1_trade_1a79f73fa2395627edf87b34f34592b340" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Trade</scope><name>_connection</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trade_1ab3d1fe3af8169b52eaf795a5853666ed" prot="private" virt="non-virtual"><scope>NetMQ_test_project::Trade</scope><name>_indicators</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trade_1ac7081d28db68d8a5693eadf280ae98bc" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Trade</scope><name>Start</name></member>
+      <member refid="class_net_m_q__test__project_1_1_trade_1acf3ffcb3ce38042e0d99b9365c6ca3c0" prot="public" virt="non-virtual"><scope>NetMQ_test_project::Trade</scope><name>Trade</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

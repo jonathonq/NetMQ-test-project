@@ -26,12 +26,12 @@ namespace NetMQ_test_project
 
             #region Set Indicators 
             Console.WriteLine(title);
-
+            
 
             List<string> UserDefinedIndicatorIds = new List<string> // Which ZMQ topics ie. indicator IDs to listen for
             {
-                "30000",
-                "30001"
+                "30000"
+                
             };
             Console.WriteLine("Inputted Indicators are: ");
             foreach (string id in UserDefinedIndicatorIds)
@@ -94,7 +94,6 @@ namespace NetMQ_test_project
 
             var connection = new Connection("testserver", "44031", IndicatorIds);
 
-
             // Create thread to listen for messages seperate from trade execution thread
             var ListenerThread = new Thread(connection.ListenForMessages) { Name="ListenerThread" };
             ListenerThread.Start();
@@ -102,11 +101,9 @@ namespace NetMQ_test_project
 
             var stopWatch = new Stopwatch();
             stopWatch.Start();
-            AutoClicker.ClickBuy();
+            AutoClicker.Click();
             stopWatch.Stop();
 
-            
-            var blah = "";
 
             stopWatch.Reset();
 
@@ -126,12 +123,15 @@ namespace NetMQ_test_project
                             switch (indicators[i].TradingRules.GenerateSignal(double.Parse(msg.Substring(6))))
                             {
                                 case Signal.Sell:
-                                    //AutoClicker.ClickSell();
+                                    stopWatch.Stop();
+                                    AutoClicker.ClickSell();
                                     Console.WriteLine("Sell signal");
                                     break;
 
                                 case Signal.Buy:
-                                    //AutoClicker.ClickBuy();
+                                    stopWatch.Stop();
+
+                                    AutoClicker.ClickBuy();
                                     Console.WriteLine("Buy signal");
                                     break;
 
@@ -140,6 +140,7 @@ namespace NetMQ_test_project
                                     break;
                             }
                             stopWatch.Stop();
+                            Console.WriteLine($"Recieved: {msg} | Signal passed: {indicators[i].TradingRules.GenerateSignal(double.Parse(msg.Substring(6)))}");
                             Console.WriteLine($"Contains {IndicatorIds[i]}");
                         }
                     }

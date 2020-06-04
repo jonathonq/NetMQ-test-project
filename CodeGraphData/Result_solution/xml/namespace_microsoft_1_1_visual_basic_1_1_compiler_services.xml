@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
-  <compounddef id="namespace_net_m_q" kind="namespace">
-    <compoundname>NetMQ</compoundname>
+  <compounddef id="namespace_microsoft_1_1_visual_basic_1_1_compiler_services" kind="namespace">
+    <compoundname>Microsoft::VisualBasic::CompilerServices</compoundname>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Connection.cs" line="4" column="1"/>
+    <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/TradingRules.cs" line="7" column="1"/>
   </compounddef>
 </doxygen>

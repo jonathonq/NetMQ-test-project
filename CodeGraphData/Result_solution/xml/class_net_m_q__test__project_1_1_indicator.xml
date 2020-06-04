@@ -149,7 +149,7 @@
         </inbodydescription>
         <location file="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" line="232" column="1" bodyfile="C:/Users/Administrator/source/repos/NetMQ test project/NetMQ test project/Indicator.cs" bodystart="232" bodyend="235"/>
         <references refid="class_net_m_q__test__project_1_1_indicator_1a242eeca6c504f5f2d2d5a4141af1fe5d" compoundref="_indicator_8cs" startline="8">NetMQ_test_project.Indicator.Id</references>
-        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="146" endline="206">NetMQ_test_project.TradingRules.DefineByInput</referencedby>
+        <referencedby refid="class_net_m_q__test__project_1_1_trading_rules_1aec53f2532395cb23decffcd6ee4090e8" compoundref="_trading_rules_8cs" startline="245" endline="305">NetMQ_test_project.TradingRules.DefineByInput</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_net_m_q__test__project_1_1_indicator_1a7008de29741ca8efb2d8204977678997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
