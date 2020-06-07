@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Threading;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Data;
 using System.Runtime.CompilerServices;
-using Microsoft.VisualBasic.CompilerServices;
-using System.Net.Http.Headers;
 
 namespace NetMQ_test_project
 {
@@ -14,13 +8,15 @@ namespace NetMQ_test_project
         Absolute,
         Deviation
     }
+
     public class TradingRules
     {
         //This class is for defining rules to a specific indicator
         public string IndicatorID { get; set; }
+
         public double _consensus;
 
-        TriggerType RulesInputType;
+        private TriggerType RulesInputType;
 
         private string _buyOperatorStr;
         private string _sellOperatorStr;
@@ -29,13 +25,11 @@ namespace NetMQ_test_project
         private Func<double, bool> _buySignal;
         private Func<double, bool> _sellSignal;
 
-
         private double _buyDevTrigger;
         private double _buyAbsTrigger;
-        
+
         private double _sellDevTrigger;
         private double _sellAbsTrigger;
-
 
         private string _displayRules;
 
@@ -50,11 +44,10 @@ namespace NetMQ_test_project
             this._buyOperator = ParseStringToOperator(buyOper);
             this._sellOperator = ParseStringToOperator(sellOper);
 
-
             if (this.RulesInputType == TriggerType.Absolute)
             {
                 //if rule is based on absolute figure then assign directly to AbsTriggers
-                //and calculate what deviation would be so it can be displayed later 
+                //and calculate what deviation would be so it can be displayed later
                 this._buyAbsTrigger = buyTrigger;
                 this._buyDevTrigger = buyTrigger - cons;
                 this._sellAbsTrigger = sellTrigger;
@@ -71,32 +64,30 @@ namespace NetMQ_test_project
                 this._sellAbsTrigger = cons + buyTrigger;
             }
 
-            this._buySignal = getFuncFromOperatorAndTrigger(_buyOperator,_buyAbsTrigger);
+            this._buySignal = getFuncFromOperatorAndTrigger(_buyOperator, _buyAbsTrigger);
             this._sellSignal = getFuncFromOperatorAndTrigger(_sellOperator, _sellAbsTrigger);
 
-
-
-            this._displayRules = String.Format("ID: {0}, If Dev {1} {2}, BUY. If Dev {3} {4}, SELL",IndicatorID,_buyOperatorStr,_buyDevTrigger,_sellOperatorStr,_sellDevTrigger);
+            this._displayRules = String.Format("ID: {0}, If Dev {1} {2}, BUY. If Dev {3} {4}, SELL", IndicatorID, _buyOperatorStr, _buyDevTrigger, _sellOperatorStr, _sellDevTrigger);
         }
-
 
         private static Operator ParseStringToOperator(string logic)
         {
             switch (logic)
             {
                 case ">": return Operator.GreaterThan;
-                    //return x > y;
+                //return x > y;
                 case "<": return Operator.LessThan;
-                     //return x < y;
+                //return x < y;
                 case ">=": return Operator.GreaterOrEqualTo;
-                    //return x >= y;
+                //return x >= y;
                 case "<=": return Operator.LessOrEqualTo;
-                    //return x <= y;
+                //return x <= y;
                 case "==": return Operator.Equals;
-                    //return x == y;
+                //return x == y;
                 default: throw new Exception("invalid logic set in trigger");
             }
         }
+
         private static bool IsOperator(string input)
         {
             if (input == ">" || input == "<" || input == ">=" || input == "<=" || input == "==")
@@ -118,12 +109,12 @@ namespace NetMQ_test_project
             Equals
         }
 
-
         public void SetBuyTrigger(string oprtr, double dev)
         {
             this._buyOperatorStr = oprtr;
             this._buyDevTrigger = dev;
         }
+
         public void SetSellTrigger(string oprtr, double dev)
         {
             this._sellOperatorStr = oprtr;
@@ -134,10 +125,10 @@ namespace NetMQ_test_project
         {
             return act - cons;
         }
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Signal GenerateSignal(double data)
         {
-
             if (_buySignal(data))
             {
                 return Signal.Buy;
@@ -150,11 +141,9 @@ namespace NetMQ_test_project
             {
                 return Signal.No_Trade;
             }
-
-
         }
 
-        private Func<double,bool> getFuncFromOperatorAndTrigger(Operator @operator, double trigger)
+        private Func<double, bool> getFuncFromOperatorAndTrigger(Operator @operator, double trigger)
         {
             Func<double, bool> f = x => false;
             switch (@operator)
@@ -163,13 +152,9 @@ namespace NetMQ_test_project
                     f = data =>
                     {
                         if (data > trigger)
-                        {
-                            return true;
-                        }
+                        { return true; }
                         else
-                        {
-                            return false;
-                        }
+                        { return false; }
                     };
                     return f;
 
@@ -177,64 +162,49 @@ namespace NetMQ_test_project
                     f = data =>
                     {
                         if (data < trigger)
-                        {
-                            return true;
-                        }
+                        { return true; }
                         else
-                        {
-                            return false;
-                        }
+                        { return false; }
                     };
                     return f;
+
                 case Operator.GreaterOrEqualTo:
                     f = data =>
                     {
                         if (data >= trigger)
-                        {
-                            return true;
-                        }
+                        { return true; }
                         else
-                        {
-                            return false;
-                        }
+                        { return false; }
                     };
                     return f;
+
                 case Operator.LessOrEqualTo:
                     f = data =>
                     {
                         if (data <= trigger)
-                        {
-                            return true;
-                        }
+                        { return true; }
                         else
-                        {
-                            return false;
-                        }
+                        { return false; }
                     };
                     return f;
+
                 case Operator.Equals:
                     f = data =>
                     {
                         if (data == trigger)
-                        {
-                            return true;
-                        }
+                        { return true; }
                         else
-                        {
-                            return false;
-                        }
+                        { return false; }
                     };
                     return f;
+
                 default:
                     break;
             }
             //TODO: Throw exception here. (Figure out correct syntax)
             Console.WriteLine("getFuncFromOperatorAndTrigger: Error. Signal will always return false");
             return f;
-
         }
-
-        
 
         public string DisplayRules()
         {
@@ -244,7 +214,6 @@ namespace NetMQ_test_project
 
         public static TradingRules DefineByInput(Indicator indicator)
         {
-
             float cons;
             string buyOp;
             float buyDev;
@@ -263,7 +232,7 @@ namespace NetMQ_test_project
                 buyOp = input.Substring(0, 2);
                 buyDev = float.Parse(input.Substring(2));
             }
-            else if(IsOperator(input.Substring(0, 1)))
+            else if (IsOperator(input.Substring(0, 1)))
             {
                 buyOp = input.Substring(0, 1);
                 buyDev = float.Parse(input.Substring(1));
@@ -275,8 +244,6 @@ namespace NetMQ_test_project
                 Console.WriteLine("Invalid Input");
             }
             Console.WriteLine("Buy Trigger set to: {0}{1}", buyOp, buyDev);
-
-
 
             Console.WriteLine("\nSell Trigger: ");
             input = Console.ReadLine();
@@ -299,11 +266,7 @@ namespace NetMQ_test_project
             }
             Console.WriteLine("\nSell Trigger set to: {0}{1}", sellOp, sellDev);
 
-
-
-            return new TradingRules(indicator.GetId(), TriggerType.Deviation, cons,buyOp,buyDev,sellOp,sellDev);
+            return new TradingRules(indicator.GetId(), TriggerType.Deviation, cons, buyOp, buyDev, sellOp, sellDev);
         }
-
     }
-
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using NetMQ;
 using NetMQ.Sockets;
@@ -10,18 +11,16 @@ namespace NetMQ_test_project
         private readonly string Ip;
         private readonly string Port;           
         public string Address;
-        private bool _listening = false;
+        //private bool _listening = false;
 
-        private string[] _topics;
+        private List<string> _topics = new List<string>();
 
         public string _lastRecieved;
 
         public StringBuilder _recievedSb = new StringBuilder();
-        public List<string> _recievedList = new List<string>();
         public string[] _recievedArray;
-        public int _recievedCount = 0;
 
-        public Connection(string server, string port, string[] topics)
+        public Connection(string server, string port, Indicator[] indicators)
         {
             switch (server.ToLower()) // Haawks servers
             {
@@ -39,23 +38,31 @@ namespace NetMQ_test_project
                     break;
             }
 
+
+            foreach  (var indi in indicators)
+            {
+                if (!_topics.Contains(indi.Id))
+                {
+                    _topics.Add(indi.Id);
+                }
+            }
             this.Port = port;
+
             this.Address = String.Format("tcp://{0}:{1}", Ip,  Port);
-            this._topics = topics;
-            this._recievedArray = new string[topics.Length];
+            this._recievedArray = new string[_topics.Count];
                 
         }
 
 
         public void ListenForMessages()
         {
-            _listening = true;
+            //_listening = true;
             
 
             // NetMQ open socket connection & subscribe
             var subscriber = new SubscriberSocket();
             subscriber.Connect(this.Address);
-            Console.WriteLine("Connecting to: " + this.Address);
+            Console.WriteLine("Connecting to: " + Address);
 
             foreach (string topic in _topics) 
             { 
@@ -70,16 +77,15 @@ namespace NetMQ_test_project
             subscriber.Options.TcpKeepaliveInterval = new System.TimeSpan(0, 0, 75);
 
 
-
-            while (_listening)
+            for (int i = 0; i < _topics.Count;)
             {
                 if (subscriber.HasIn)
                 {
-                    _recievedSb.Append(subscriber.ReceiveFrameString()+" ");
-                    _recievedList.Add(subscriber.ReceiveFrameString());
+                    //_recievedSb.Append(subscriber.ReceiveFrameString() + " ");
+
+                    _recievedArray[i] = subscriber.ReceiveFrameString();
+                    i++;
                 }
-                
-                
             }
          
         }
@@ -95,7 +101,7 @@ namespace NetMQ_test_project
 
         public void StopListening()
         {
-            _listening = false;
+            //_listening = false;
         }
     }
     
